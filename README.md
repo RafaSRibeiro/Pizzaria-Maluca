@@ -1,8 +1,7 @@
-Pizzaria Maluca
+#**Pizzaria Maluca**
+  Jogo desenvolvido para a disciplina de Estrutura de Dados.
 
-Jogo desenvolvido para a disciplina de Estrutura de Dados.
-
-Como funciona o jogo: 
+##Como funciona o jogo: 
 
   2 a 5 jogadores. 
   
@@ -12,108 +11,108 @@ Como funciona o jogo:
   
   Ganha o jogador que conseguir todos os ingredientes da sua pizza primeiro.
   
--O tabuleiro deve ser implementado em uma lista circular duplamente encadeada.
+  - O tabuleiro deve ser implementado em uma lista circular duplamente encadeada.
 
--As pizzas devem ser implementadas numa lista simplesmente encadeada, contendo 5 ingredientes. A cada ingrediente conquistado, o mesmo é retirado da lista. Ganha o jogo o jogador que esvaziar primeiro a sua lista.
+  - As pizzas devem ser implementadas numa lista simplesmente encadeada, contendo 5 ingredientes. A cada ingrediente conquistado, o mesmo é retirado da lista. Ganha o jogo o jogador que esvaziar primeiro a sua lista.
 
--Cartas de sorte ou azar devem ser implementadas em uma pilha. As 20 cartas devem ser empilhadas aleatóriamente.
+  - Cartas de sorte ou azar devem ser implementadas em uma pilha. As 20 cartas devem ser empilhadas aleatóriamente.
 
-Pizzas:
+##Pizzas:
   
-  -calabresa (calabresa. azeitona, brócolis, ovo, ervilha)
+  - calabresa (calabresa. azeitona, brócolis, ovo, ervilha)
   
-  -marguerita (calabresa, brócolis, tomate, queijo, milho)
+  - marguerita (calabresa, brócolis, tomate, queijo, milho)
   
-  -portuguesa (presunto, azeitona, queijo, ovo, milho)
+  - portuguesa (presunto, azeitona, queijo, ovo, milho)
   
-  -romana (queijo, cebola, milho, presunto, ervilha)
+  - romana (queijo, cebola, milho, presunto, ervilha)
   
-  -toscana (tomate, presunto, azeitona, calabresa, cebola)
+  - toscana (tomate, presunto, azeitona, calabresa, cebola)
   
-  -vegetariana (brócolis, tomate, ervilha, cebola, ovos)
+  - vegetariana (brócolis, tomate, ervilha, cebola, ovos)
 
-Sorte ou azar(20 cartas):
+##Sorte ou azar(20 cartas):
 
-  -Pegue um ingrediente de sua escolha (Sorte) - 5 cartas
+  - Pegue um ingrediente de sua escolha (Sorte) - 5 cartas
   
-  -Pegue dois ingredientes de sua escolha (Sorte) - 2 cartas
+  - Pegue dois ingredientes de sua escolha (Sorte) - 2 cartas
   
-  -Jogo os dados novamente (Sorte) - 3 cartas
+  - Jogo os dados novamente (Sorte) - 3 cartas
   
-  -Fique sem jogar por 1 rodada (Azar) - 3 cartas
+  - Fique sem jogar por 1 rodada (Azar) - 3 cartas
   
-  -Perca um ingrediente aleatório (Azar) - 5 cartas
+  - Perca um ingrediente aleatório (Azar) - 5 cartas
   
-  -Sua pizza queimou, perca todos os ingredientes (Azar) - 2 cartas
+  - Sua pizza queimou, perca todos os ingredientes (Azar) - 2 cartas
   
-Tabuleiro:
+##Tabuleiro:
     
-    1  - PERDE TUDO
+ - 1 - PERDE TUDO
     
-    2  - CEBOLA
+ - 2 - CEBOLA
     
-    3  - SORTE OU AZAR
+ - 3 - SORTE OU AZAR
     
-    4  - CALABRESA
+ - 4 - CALABRESA
     
-    5  - QUEIJO
+ - 5 - QUEIJO
     
-    6  - SORTE OU AZAR 
+ - 6 - SORTE OU AZAR 
     
-    7  - SORTE OU AZAR
+ - 7 - SORTE OU AZAR
     
-    8  - TOMATE
+ - 8 - TOMATE
     
-    9  - OVOS
+ - 9 - OVOS
     
-    10 - AZEITONA
+ - 10 - AZEITONA
+      
+ - 11 - SORTE OU AZAR
     
-    11 - SORTE OU AZAR
+ - 12 - SORTE OU AZAR
     
-    12 - SORTE OU AZAR
+ - 13 - MILHO
     
-    13 - MILHO
+ - 14 - ERVILHA
     
-    14 - ERVILHA
+ - 15 - SORTE OU AZAR
     
-    15 - SORTE OU AZAR
+ - 16 - PRESUNTO
     
-    16 - PRESUNTO
+ - 17 - TOMATE
     
-    17 - TOMATE
+ - 18 - MILHO
     
-    18 - MILHO
+ - 19 - SORTE OU AZAR
     
-    19 - SORTE OU AZAR
+ - 20 - SORTE OU AZAR
     
-    20 - SORTE OU AZAR
+ - 21 - BROCOLIS
     
-    21 - BROCOLIS
+ - 22 - SORTE OU AZAR
     
-    22 - SORTE OU AZAR
+ - 23 - OVOS
     
-    23 - OVOS
+ - 24 - CEBOLA
+   
+ - 25 - SORTE OU AZAR
     
-    24 - CEBOLA
+ - 26 - CALABRESA
+   
+ - 27 - SORTE OU AZAR
     
-    25 - SORTE OU AZAR
+ - 28 - PRESUNTO
     
-    26 - CALABRESA
+ - 29 - SORTE OU AZAR
     
-    27 - SORTE OU AZAR
+ - 30 - QUEIJO
+  
+ - 31 - ERVILHA
     
-    28 - PRESUNTO
+ - 32 - SORTE OU AZAR
     
-    29 - SORTE OU AZAR
+ - 33 - BROCOLIS
     
-    30 - QUEIJO
+ - 34 - AZEITONA
     
-    31 - ERVILHA
-    
-    32 - SORTE OU AZAR
-    
-    33 - BROCOLIS
-    
-    34 - AZEITONA
-    
-    35 - SORTE OU AZAR
+ - 35 - SORTE OU AZAR
