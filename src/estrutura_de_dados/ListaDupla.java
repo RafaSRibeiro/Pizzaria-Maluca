@@ -96,7 +96,7 @@ public class ListaDupla {
      int cont = 0;
      atual = primeiro;
 
-     while(atual != null && !atual.nomeEtapa.equals(n)) {
+     while(atual != null && !atual.nomeEtapa.equalsIgnoreCase(n)) {
        atual = atual.proximo;
        cont ++;
      }
