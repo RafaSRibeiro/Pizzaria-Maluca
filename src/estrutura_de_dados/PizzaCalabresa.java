@@ -1,6 +1,7 @@
 package estrutura_de_dados;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class PizzaCalabresa {
 	ListaDupla lista = new ListaDupla();
@@ -84,15 +85,66 @@ public class PizzaCalabresa {
 		
 		setQt(5);
 	}
+	
 	public void perdeIngredienteX(String elemento) {
+		if(lista.buscaElemento(elemento) > -1){
 			lista.removeElemento(elemento);
 			setQt(getQt()-1);
-			verificaSeGanhou();
+			System.out.println("O Jogador "+ getJogador() + " pegou "+elemento + "!");
+		}
+		verificaSeGanhou();
+}
+	
+	public int ganhaIngredienteAleatorio(){
+		Random n = new Random();
+		int num;
+		while(true){
+			if(getQt() == 5){
+				System.out.println("Sua Pizza ja esta vazia!");
+				return 1;
+			}
+			num = n.nextInt(5);
+			if(lista.buscaElemento("calabresa") == -1 && num == 0){
+				lista.inserePrimeiro("calabresa", 0);
+				System.out.println("O jogador "+getJogador()+" perdeu calabresa");
+				setQt(getQt()+1);
+
+				return 1;
+			}
+			if(lista.buscaElemento("azeitona") == -1 && num == 1){
+				lista.inserePrimeiro("azeitona", 0);
+				System.out.println("O jogador "+getJogador()+" perdeu azeitona");
+				setQt(getQt()+1);
+
+				return 1;
+			}
+			if(lista.buscaElemento("brocolis") == -1 && num == 2){
+				lista.inserePrimeiro("brocolis", 0);
+				System.out.println("O jogador "+getJogador()+" perdeu brocolis");
+				setQt(getQt()+1);
+
+				return 1;
+			}
+			if(lista.buscaElemento("ovos") == -1 && num == 3){
+				lista.inserePrimeiro("ovos", 0);			
+				System.out.println("O jogador "+getJogador()+" perdeu ovos");
+				setQt(getQt()+1);
+
+				return 1;
+			}
+			if(lista.buscaElemento("ervilha") == -1 && num == 4){
+				lista.inserePrimeiro("ervilha", 0);
+				System.out.println("O jogador "+getJogador()+" perdeu ervilha");
+				setQt(getQt()+1);
+
+				return 1;
+			}
+		}
 	}
 	
 	public void verificaSeGanhou(){
 		if(getQt() == 0){
-			System.out.println("O Jogador "+getJogador() +"ganhou!");
+			System.out.println("O Jogador "+getJogador() +" ganhou!");
 			System.exit(0);
 		}
 	}

@@ -1,6 +1,7 @@
 package estrutura_de_dados;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class PizzaVegetariana {
 	ListaDupla lista = new ListaDupla();
@@ -81,16 +82,64 @@ public class PizzaVegetariana {
 	}
 	
 	public void perdeIngredienteX(String elemento) {
+		if(lista.buscaElemento(elemento) > -1){
 			lista.removeElemento(elemento);
 			setQt(getQt()-1);
-			verificaSeGanhou();
+			System.out.println("O Jogador "+ getJogador() + " pegou "+elemento + "!");
+		}
+		verificaSeGanhou();
+}
+	
+	public int ganhaIngredienteAleatorio(){
+		Random n = new Random();
+		int num;
+		while(true){
+			if(getQt() == 5){
+				System.out.println("Sua Pizza ja esta vazia!");
+				return 1;
+			}
+			num = n.nextInt(5);
+			if(lista.buscaElemento("brocolis") == -1 && num == 0){
+				lista.inserePrimeiro("brocolis", 0);
+				System.out.println("O jogador "+getJogador()+" perdeu brocolis");
+				setQt(getQt()+1);
 
+				return 1;
+			}
+			if(lista.buscaElemento("tomate") == -1 && num == 1){
+				lista.inserePrimeiro("tomate", 0);
+				System.out.println("O jogador "+getJogador()+" perdeu tomate");
+				setQt(getQt()+1);
 
+				return 1;
+			}
+			if(lista.buscaElemento("ervilha") == -1 && num == 2){
+				lista.inserePrimeiro("ervilha", 0);
+				System.out.println("O jogador "+getJogador()+" perdeu ervilha");
+				setQt(getQt()+1);
+
+				return 1;
+			}
+			if(lista.buscaElemento("cebola") == -1 && num == 3){
+				lista.inserePrimeiro("cebola", 0);			
+				System.out.println("O jogador "+getJogador()+" perdeu cebola");
+				setQt(getQt()+1);
+
+				return 1;
+			}
+			if(lista.buscaElemento("ovos") == -1 && num == 4){
+				lista.inserePrimeiro("ovos", 0);
+				System.out.println("O jogador "+getJogador()+" perdeu ovos");
+				setQt(getQt()+1);
+
+				return 1;
+			}
+		}
 	}
 	
 	public void verificaSeGanhou(){
 		if(lista.estaVazio()){
-			System.out.println("O Jogador "+getJogador() +"ganhou!");
+			System.out.println("O Jogador "+getJogador() +" ganhou!");
 			System.exit(0);
 		}
 	}
