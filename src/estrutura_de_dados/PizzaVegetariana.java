@@ -7,6 +7,15 @@ public class PizzaVegetariana {
 	int Jogador;
 	int qt;
 	ArrayList<String>faltam = new ArrayList<>();
+	boolean rodadaSemJogar;//Sorte ou Azar
+
+	public boolean isRodadaSemJogar() {
+		return rodadaSemJogar;
+	}
+
+	public void setRodadaSemJogar(boolean rodadaSemJogar) {
+		this.rodadaSemJogar = rodadaSemJogar;
+	}
 
 	public int getQt() {
 		return qt;
@@ -25,19 +34,19 @@ public class PizzaVegetariana {
 	}
 	public ArrayList<String> faltamEssesIngredientes(){
 		ArrayList<String> ingredientes = new ArrayList<>();
-		ingredientes.add("Brocolis");
-		ingredientes.add("Tomate");
-		ingredientes.add("Ervilha");
-		ingredientes.add("Cebola");
 		ingredientes.add("Ovos");
+		ingredientes.add("Cebola");
+		ingredientes.add("Ervilha");
+		ingredientes.add("Tomate");
+		ingredientes.add("Brocolis");
 
 		faltam.clear();
 		
 		for(int j = 0; j<ingredientes.size() ; j++){
 			String ing = ingredientes.get(j);
-			for(int i = 0; i<lista.comprimento(); i++){
-				if(ing.equalsIgnoreCase(lista.elementoNaPosicao(i).getNomeEtapa())){
-					faltam.add(ingredientes.get(j));
+			for(int i = 1; i<this.lista.comprimento()+1; i++){
+				if(ing.equalsIgnoreCase(this.lista.elementoNaPosicao(i).getNomeEtapa())){
+					this.faltam.add(ingredientes.get(j));
 					ingredientes.remove(j);
 					j--;
 				}
@@ -53,8 +62,9 @@ public class PizzaVegetariana {
 		lista.inserePrimeiro("ervilha", 0);
 		lista.inserePrimeiro("cebola", 0);
 		lista.inserePrimeiro("ovos", 0);
-		Jogador = jogador;
+		setJogador(jogador);
 		setQt(5);
+		setRodadaSemJogar(false);
 
 	}
 	
@@ -73,15 +83,16 @@ public class PizzaVegetariana {
 	public void perdeIngredienteX(String elemento) {
 			lista.removeElemento(elemento);
 			setQt(getQt()-1);
+			verificaSeGanhou();
+
 
 	}
 	
-	public boolean verificaSeGanhou(){
+	public void verificaSeGanhou(){
 		if(lista.estaVazio()){
 			System.out.println("O Jogador "+getJogador() +"ganhou!");
-			return true;
+			System.exit(0);
 		}
-		return false;
 	}
 	
 }

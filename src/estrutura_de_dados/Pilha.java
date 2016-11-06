@@ -23,11 +23,19 @@ public class Pilha {
 		}
 	}
 
-	public SorteOuAzar desempilha(){
-		SorteOuAzar retornaCarta = topo.carta;
-		NoPilha aux = topo;
-		topo = topo.proximo;
-		aux = null;
-		return retornaCarta;
+	public NoPilha desempilha(){
+		if(estaVazia()){
+			return null;
+		}
+		else{
+			NoPilha retornaCarta = topo;
+			
+			this.topo = topo.proximo;
+//			return r;
+//			NoPilha aux = topo;
+//			topo = topo.proximo;
+//			aux = null;
+			return retornaCarta;
+		}
 	}
 }

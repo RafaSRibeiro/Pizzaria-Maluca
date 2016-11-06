@@ -9,14 +9,13 @@ public class TabuleiroPrincipal {
 	static ListaSimples listaJogadores = new ListaSimples();	
 	static ListaDupla tabuleiro = new ListaDupla();
 	static int j1 = 0, j2 = 0, j3 = 0, j4 = 0, j5 = 0; //posicao de cada jogador
-	static boolean ninguemGanhou = true;
 	static PizzaCalabresa calabresa = new PizzaCalabresa(0);
 	static PizzaMarguerita marguerita = new PizzaMarguerita(0);
 	static PizzaPortuguesa portuguesa = new PizzaPortuguesa(0);
 	static PizzaRomana romana = new PizzaRomana(0);
 	static PizzaToscana toscana = new PizzaToscana(0);
 	static PizzaVegetariana vegetariana = new PizzaVegetariana(0);
-	
+	static boolean jogaDadoNovamente = false;
 	static Pilha cartas = new Pilha();
 	static ListaSimplesCartas auxCartas = new ListaSimplesCartas();	
 
@@ -58,6 +57,7 @@ public class TabuleiroPrincipal {
 			SorteOuAzar cartaEscolhida = auxCartas.retornaDaPosicao(num);
 			cartas.empilha(cartaEscolhida);
 			auxCartas.removeNaPosicao(num);
+			
 		}	
 	}
 			
@@ -129,8 +129,50 @@ public class TabuleiroPrincipal {
 		
 		montaTabuleiro();
 		
-		while(ninguemGanhou){
-			rodada(nJogadores);
+		while(true){
+			for(int i = 1; i<= nJogadores; i++){
+				if(cartas.estaVazia()){
+					System.out.println("Embaralhando as cartas de Sorte ou Azar acabaram\n");
+					SorteOuAzar();						
+				}
+				if(calabresa.rodadaSemJogar && i == calabresa.getJogador()){
+					System.out.println("Jogador "+i+", essa rodada você não pode jogar!");
+					calabresa.setRodadaSemJogar(false);
+					i++;
+				}
+				else if(marguerita.rodadaSemJogar && i == marguerita.getJogador()){
+					System.out.println("Jogador "+i+", essa rodada você não pode jogar!");
+					marguerita.setRodadaSemJogar(false);
+					i++;
+				}
+				else if(portuguesa.rodadaSemJogar && i == portuguesa.getJogador()){
+					System.out.println("Jogador "+i+", essa rodada você não pode jogar!");
+					portuguesa.setRodadaSemJogar(false);
+					i++;
+				}
+				else if(romana.rodadaSemJogar && i == romana.getJogador()){
+					System.out.println("Jogador "+i+", essa rodada você não pode jogar!");
+					romana.setRodadaSemJogar(false);
+					i++;
+				}
+				else if(toscana.rodadaSemJogar && i == toscana.getJogador()){
+					System.out.println("Jogador "+i+", essa rodada você não pode jogar!");
+					toscana.setRodadaSemJogar(false);
+					i++;
+				}
+				else if(vegetariana.rodadaSemJogar && i == vegetariana.getJogador()){
+					System.out.println("Jogador "+i+", essa rodada você não pode jogar!");
+					vegetariana.setRodadaSemJogar(false);
+					i++;
+				}
+				if(jogaDadoNovamente){//Se o jogador pega a carta de jogar novamente
+					i--;
+					jogaDadoNovamente = false;
+				}
+				
+				rodada(i);	
+					
+			}
 		}
 		
 	}
@@ -163,10 +205,13 @@ public class TabuleiroPrincipal {
 			}
 		}
 		else if(posicao.equalsIgnoreCase("SORTE OU AZAR")){
-			SorteOuAzar carta = cartas.desempilha();
+
+			NoPilha noCarta = cartas.desempilha();
+			SorteOuAzar Ccarta = noCarta.carta;
+			int carta = Ccarta.getNumero();
 			
 			//Pegue um ingrediente de sua escolha
-			if(carta.numero == 0){
+			if(carta == 0){
 				if(calabresa.getJogador() == jogador){
 					
 					ArrayList<String> array = calabresa.faltamEssesIngredientes();
@@ -182,8 +227,8 @@ public class TabuleiroPrincipal {
 						int op = Integer.parseInt(JOptionPane.showInputDialog(msg));
 						for (int i = 0; i<array.size();i++){
 							if(op-1 == i){
-								calabresa.perdeIngredienteX(array.get(op-1));
 								System.out.println("Voce pegou: "+ array.get(op-1));
+								calabresa.perdeIngredienteX(array.get(op-1));
 								tenteNovamente = false;
 							}
 						}
@@ -191,9 +236,9 @@ public class TabuleiroPrincipal {
 							System.out.println("Opa, numero invalido tente novamente!");
 					
 					}while(tenteNovamente);
-					
-					
+	
 				}
+				
 				if(marguerita.getJogador() == jogador){
 					ArrayList<String> array = marguerita.faltamEssesIngredientes();
 					String msg = "SORTE OU AZAR\n\n"
@@ -208,8 +253,8 @@ public class TabuleiroPrincipal {
 						int op = Integer.parseInt(JOptionPane.showInputDialog(msg));
 						for (int i = 0; i<array.size();i++){
 							if(op-1 == i){
-								marguerita.perdeIngredienteX(array.get(op-1));
 								System.out.println("Voce pegou: "+ array.get(op-1));
+								marguerita.perdeIngredienteX(array.get(op-1));
 								tenteNovamente = false;
 							}
 						}
@@ -217,6 +262,7 @@ public class TabuleiroPrincipal {
 							System.out.println("Opa, numero invalido tente novamente!");
 					
 					}while(tenteNovamente);
+
 				}
 				if(portuguesa.getJogador() == jogador){
 					ArrayList<String> array = portuguesa.faltamEssesIngredientes();
@@ -232,8 +278,8 @@ public class TabuleiroPrincipal {
 						int op = Integer.parseInt(JOptionPane.showInputDialog(msg));
 						for (int i = 0; i<array.size();i++){
 							if(op-1 == i){
-								portuguesa.perdeIngredienteX(array.get(op-1));
 								System.out.println("Voce pegou: "+ array.get(op-1));
+								portuguesa.perdeIngredienteX(array.get(op-1));
 								tenteNovamente = false;
 							}
 						}
@@ -241,7 +287,7 @@ public class TabuleiroPrincipal {
 							System.out.println("Opa, numero invalido tente novamente!");
 					
 					}while(tenteNovamente);
-					
+
 					
 				}
 				if(romana.getJogador() == jogador){
@@ -259,8 +305,8 @@ public class TabuleiroPrincipal {
 						int op = Integer.parseInt(JOptionPane.showInputDialog(msg));
 						for (int i = 0; i<array.size();i++){
 							if(op-1 == i){
-								romana.perdeIngredienteX(array.get(op-1));
 								System.out.println("Voce pegou: "+ array.get(op-1));
+								romana.perdeIngredienteX(array.get(op-1));
 								tenteNovamente = false;
 							}
 						}
@@ -268,6 +314,7 @@ public class TabuleiroPrincipal {
 							System.out.println("Opa, numero invalido tente novamente!");
 					
 					}while(tenteNovamente);
+
 				}
 				if(toscana.getJogador() == jogador){
 					
@@ -284,8 +331,8 @@ public class TabuleiroPrincipal {
 						int op = Integer.parseInt(JOptionPane.showInputDialog(msg));
 						for (int i = 0; i<array.size();i++){
 							if(op-1 == i){
-								toscana.perdeIngredienteX(array.get(op-1));
 								System.out.println("Voce pegou: "+ array.get(op-1));
+								toscana.perdeIngredienteX(array.get(op-1));
 								tenteNovamente = false;
 							}
 						}
@@ -293,6 +340,7 @@ public class TabuleiroPrincipal {
 							System.out.println("Opa, numero invalido tente novamente!");
 					
 					}while(tenteNovamente);
+
 				}
 				if(vegetariana.getJogador() == jogador){
 					
@@ -309,8 +357,8 @@ public class TabuleiroPrincipal {
 						int op = Integer.parseInt(JOptionPane.showInputDialog(msg));
 						for (int i = 0; i<array.size();i++){
 							if(op-1 == i){
-								vegetariana.perdeIngredienteX(array.get(op-1));
 								System.out.println("Voce pegou: "+ array.get(op-1));
+								vegetariana.perdeIngredienteX(array.get(op-1));
 								tenteNovamente = false;
 							}
 						}
@@ -318,11 +366,12 @@ public class TabuleiroPrincipal {
 							System.out.println("Opa, numero invalido tente novamente!");
 					
 					}while(tenteNovamente);
+
 				}
 			}
 			
 			//Pegue dois ingredientes de sua escolha (Sorte) x2
-			if(carta.numero == 1){
+			if(carta == 1){
 				if(calabresa.getJogador() == jogador){
 					//Primeiro
 					ArrayList<String> array = calabresa.faltamEssesIngredientes();
@@ -338,8 +387,9 @@ public class TabuleiroPrincipal {
 						int op = Integer.parseInt(JOptionPane.showInputDialog(msg));
 						for (int i = 0; i<array.size();i++){
 							if(op-1 == i){
-								calabresa.perdeIngredienteX(array.get(op-1));
 								System.out.println("Voce pegou: "+ array.get(op-1));
+								calabresa.perdeIngredienteX(array.get(op-1));
+								System.out.println(array.get(op-1));//testando
 								tenteNovamente = false;
 							}
 						}
@@ -347,10 +397,8 @@ public class TabuleiroPrincipal {
 							System.out.println("Opa, numero invalido tente novamente!");
 					
 					}while(tenteNovamente);
-					if(array.size() == 1){
-						System.out.println("Parabens, você ganhou!");
-						System.exit(0);
-					}
+
+				
 					//Segundo
 					array = calabresa.faltamEssesIngredientes();
 					msg = "SORTE OU AZAR\n\n"
@@ -365,8 +413,10 @@ public class TabuleiroPrincipal {
 						int op = Integer.parseInt(JOptionPane.showInputDialog(msg));
 						for (int i = 0; i<array.size();i++){
 							if(op-1 == i){
-								calabresa.perdeIngredienteX(array.get(op-1));
 								System.out.println("Voce pegou: "+ array.get(op-1));
+								calabresa.perdeIngredienteX(array.get(op-1));
+								System.out.println(array.get(op-1));//testando
+
 								tenteNovamente = false;
 							}
 						}
@@ -374,12 +424,6 @@ public class TabuleiroPrincipal {
 							System.out.println("Opa, numero invalido tente novamente!");
 					
 					}while(tenteNovamente);
-					if(array.size() == 1){
-						System.out.println("Parabens, você ganhou!");
-						System.exit(0);
-					}
-					
-					
 					
 				}
 				if(marguerita.getJogador() == jogador){
@@ -396,8 +440,8 @@ public class TabuleiroPrincipal {
 						int op = Integer.parseInt(JOptionPane.showInputDialog(msg));
 						for (int i = 0; i<array.size();i++){
 							if(op-1 == i){
-								marguerita.perdeIngredienteX(array.get(op-1));
 								System.out.println("Voce pegou: "+ array.get(op-1));
+								marguerita.perdeIngredienteX(array.get(op-1));
 								tenteNovamente = false;
 							}
 						}
@@ -405,12 +449,9 @@ public class TabuleiroPrincipal {
 							System.out.println("Opa, numero invalido tente novamente!");
 					
 					}while(tenteNovamente);
-					if(array.size() == 1){
-						System.out.println("Parabens, você ganhou!");
-						System.exit(0);
-					}
+
 					//Segundo
-					array = calabresa.faltamEssesIngredientes();
+					array = marguerita.faltamEssesIngredientes();
 					msg = "SORTE OU AZAR\n\n"
 							+ "Pegue mais um ingrediente!\n"
 							+ "Esses são os ingredientes que você precisa:\n\n";
@@ -423,8 +464,8 @@ public class TabuleiroPrincipal {
 						int op = Integer.parseInt(JOptionPane.showInputDialog(msg));
 						for (int i = 0; i<array.size();i++){
 							if(op-1 == i){
-								calabresa.perdeIngredienteX(array.get(op-1));
 								System.out.println("Voce pegou: "+ array.get(op-1));
+								marguerita.perdeIngredienteX(array.get(op-1));
 								tenteNovamente = false;
 							}
 						}
@@ -432,11 +473,6 @@ public class TabuleiroPrincipal {
 							System.out.println("Opa, numero invalido tente novamente!");
 					
 					}while(tenteNovamente);
-					if(array.size() == 1){
-						System.out.println("Parabens, você ganhou!");
-						System.exit(0);
-					}
-					
 					
 					
 				}
@@ -454,8 +490,8 @@ public class TabuleiroPrincipal {
 						int op = Integer.parseInt(JOptionPane.showInputDialog(msg));
 						for (int i = 0; i<array.size();i++){
 							if(op-1 == i){
-								portuguesa.perdeIngredienteX(array.get(op-1));
 								System.out.println("Voce pegou: "+ array.get(op-1));
+								portuguesa.perdeIngredienteX(array.get(op-1));
 								tenteNovamente = false;
 							}
 						}
@@ -463,12 +499,11 @@ public class TabuleiroPrincipal {
 							System.out.println("Opa, numero invalido tente novamente!");
 					
 					}while(tenteNovamente);
-					if(array.size() == 1){
-						System.out.println("Parabens, você ganhou!");
-						System.exit(0);
-					}
+					
+
+					
 					//Segundo
-					array = calabresa.faltamEssesIngredientes();
+					array = portuguesa.faltamEssesIngredientes();
 					msg = "SORTE OU AZAR\n\n"
 							+ "Pegue mais um ingrediente!\n"
 							+ "Esses são os ingredientes que você precisa:\n\n";
@@ -481,8 +516,8 @@ public class TabuleiroPrincipal {
 						int op = Integer.parseInt(JOptionPane.showInputDialog(msg));
 						for (int i = 0; i<array.size();i++){
 							if(op-1 == i){
-								calabresa.perdeIngredienteX(array.get(op-1));
 								System.out.println("Voce pegou: "+ array.get(op-1));
+								portuguesa.perdeIngredienteX(array.get(op-1));
 								tenteNovamente = false;
 							}
 						}
@@ -490,10 +525,6 @@ public class TabuleiroPrincipal {
 							System.out.println("Opa, numero invalido tente novamente!");
 					
 					}while(tenteNovamente);
-					if(array.size() == 1){
-						System.out.println("Parabens, você ganhou!");
-						System.exit(0);
-					}
 					
 					
 				}
@@ -512,8 +543,8 @@ public class TabuleiroPrincipal {
 						int op = Integer.parseInt(JOptionPane.showInputDialog(msg));
 						for (int i = 0; i<array.size();i++){
 							if(op-1 == i){
-								romana.perdeIngredienteX(array.get(op-1));
 								System.out.println("Voce pegou: "+ array.get(op-1));
+								romana.perdeIngredienteX(array.get(op-1));
 								tenteNovamente = false;
 							}
 						}
@@ -521,12 +552,10 @@ public class TabuleiroPrincipal {
 							System.out.println("Opa, numero invalido tente novamente!");
 					
 					}while(tenteNovamente);
-					if(array.size() == 1){
-						System.out.println("Parabens, você ganhou!");
-						System.exit(0);
-					}
+					
+					
 					//Segundo
-					array = calabresa.faltamEssesIngredientes();
+					array = romana.faltamEssesIngredientes();
 					msg = "SORTE OU AZAR\n\n"
 							+ "Pegue mais um ingrediente!\n"
 							+ "Esses são os ingredientes que você precisa:\n\n";
@@ -539,8 +568,8 @@ public class TabuleiroPrincipal {
 						int op = Integer.parseInt(JOptionPane.showInputDialog(msg));
 						for (int i = 0; i<array.size();i++){
 							if(op-1 == i){
-								calabresa.perdeIngredienteX(array.get(op-1));
 								System.out.println("Voce pegou: "+ array.get(op-1));
+								romana.perdeIngredienteX(array.get(op-1));
 								tenteNovamente = false;
 							}
 						}
@@ -548,11 +577,6 @@ public class TabuleiroPrincipal {
 							System.out.println("Opa, numero invalido tente novamente!");
 					
 					}while(tenteNovamente);
-					if(array.size() == 1){
-						System.out.println("Parabens, você ganhou!");
-						System.exit(0);
-					}
-					
 					
 					
 				}
@@ -571,8 +595,8 @@ public class TabuleiroPrincipal {
 						int op = Integer.parseInt(JOptionPane.showInputDialog(msg));
 						for (int i = 0; i<array.size();i++){
 							if(op-1 == i){
-								toscana.perdeIngredienteX(array.get(op-1));
 								System.out.println("Voce pegou: "+ array.get(op-1));
+								toscana.perdeIngredienteX(array.get(op-1));
 								tenteNovamente = false;
 							}
 						}
@@ -580,12 +604,10 @@ public class TabuleiroPrincipal {
 							System.out.println("Opa, numero invalido tente novamente!");
 					
 					}while(tenteNovamente);
-					if(array.size() == 1){
-						System.out.println("Parabens, você ganhou!");
-						System.exit(0);
-					}
+					
+					
 					//Segundo
-					array = calabresa.faltamEssesIngredientes();
+					array = toscana.faltamEssesIngredientes();
 					msg = "SORTE OU AZAR\n\n"
 							+ "Pegue mais um ingrediente!\n"
 							+ "Esses são os ingredientes que você precisa:\n\n";
@@ -598,8 +620,8 @@ public class TabuleiroPrincipal {
 						int op = Integer.parseInt(JOptionPane.showInputDialog(msg));
 						for (int i = 0; i<array.size();i++){
 							if(op-1 == i){
-								calabresa.perdeIngredienteX(array.get(op-1));
 								System.out.println("Voce pegou: "+ array.get(op-1));
+								toscana.perdeIngredienteX(array.get(op-1));
 								tenteNovamente = false;
 							}
 						}
@@ -607,11 +629,6 @@ public class TabuleiroPrincipal {
 							System.out.println("Opa, numero invalido tente novamente!");
 					
 					}while(tenteNovamente);
-					if(array.size() == 1){
-						System.out.println("Parabens, você ganhou!");
-						System.exit(0);
-					}
-					
 					
 					
 				}
@@ -630,8 +647,8 @@ public class TabuleiroPrincipal {
 						int op = Integer.parseInt(JOptionPane.showInputDialog(msg));
 						for (int i = 0; i<array.size();i++){
 							if(op-1 == i){
-								vegetariana.perdeIngredienteX(array.get(op-1));
 								System.out.println("Voce pegou: "+ array.get(op-1));
+								vegetariana.perdeIngredienteX(array.get(op-1));
 								tenteNovamente = false;
 							}
 						}
@@ -639,12 +656,10 @@ public class TabuleiroPrincipal {
 							System.out.println("Opa, numero invalido tente novamente!");
 					
 					}while(tenteNovamente);
-					if(array.size() == 1){
-						System.out.println("Parabens, você ganhou!");
-						System.exit(0);
-					}
+					
+					
 					//Segundo
-					array = calabresa.faltamEssesIngredientes();
+					array = vegetariana.faltamEssesIngredientes();
 					msg = "SORTE OU AZAR\n\n"
 							+ "Pegue mais um ingrediente!\n"
 							+ "Esses são os ingredientes que você precisa:\n\n";
@@ -657,8 +672,8 @@ public class TabuleiroPrincipal {
 						int op = Integer.parseInt(JOptionPane.showInputDialog(msg));
 						for (int i = 0; i<array.size();i++){
 							if(op-1 == i){
-								calabresa.perdeIngredienteX(array.get(op-1));
 								System.out.println("Voce pegou: "+ array.get(op-1));
+								vegetariana.perdeIngredienteX(array.get(op-1));
 								tenteNovamente = false;
 							}
 						}
@@ -666,32 +681,54 @@ public class TabuleiroPrincipal {
 							System.out.println("Opa, numero invalido tente novamente!");
 					
 					}while(tenteNovamente);
-					if(array.size() == 1){
-						System.out.println("Parabens, você ganhou!");
-						System.exit(0);
-					}
 					
 					
 				}
 			}
 			
 			//Jogue os dados novamente (Sorte)
-			if(carta.numero == 2){
-			
+			if(carta == 2){
+				System.out.println("SORTE OU AZAR\nJogue os dados novamente (Sorte)");
+				jogaDadoNovamente = true;
 			}
 			
 			//Fique sem jogar por 1 rodada (Azar)
-			if(carta.numero == 3){
-				
+			if(carta == 3){
+				if(calabresa.getJogador() == jogador){
+					calabresa.setRodadaSemJogar(true);
+					System.out.println("SORTE OU AZAR\nFique sem jogar por 1 rodada (Azar)");
+				}
+				if(marguerita.getJogador() == jogador){
+					marguerita.setRodadaSemJogar(true);
+					System.out.println("SORTE OU AZAR\nFique sem jogar por 1 rodada (Azar)");
+				}
+				if(portuguesa.getJogador() == jogador){
+					portuguesa.setRodadaSemJogar(true);
+					System.out.println("SORTE OU AZAR\nFique sem jogar por 1 rodada (Azar)");
+				}
+				if(romana.getJogador() == jogador){
+					romana.setRodadaSemJogar(true);
+					System.out.println("SORTE OU AZAR\nFique sem jogar por 1 rodada (Azar)");
+
+				}
+				if(toscana.getJogador() == jogador){
+					toscana.setRodadaSemJogar(true);
+					System.out.println("SORTE OU AZAR\nFique sem jogar por 1 rodada (Azar)");
+
+				}
+				if(vegetariana.getJogador() == jogador){
+					vegetariana.setRodadaSemJogar(true);
+					System.out.println("SORTE OU AZAR\nFique sem jogar por 1 rodada (Azar)");
+				}
 			}
 			
 			//Perca um ingrediente aleatório (Azar)
-			if(carta.numero == 4){
+			if(carta == 4){
 				
 			}
 			
 			//Sua pizza queimou, perca todos os ingredientes (Azar)
-			if(carta.numero == 5){
+			if(carta == 5){
 				if(calabresa.getJogador() == jogador){
 					calabresa.limpaPizza();
 					System.out.println("SORTE OU AZAR\nSua pizza queimou, perca todos os ingredientes (Azar)");
@@ -732,271 +769,210 @@ public class TabuleiroPrincipal {
 				if((calabresa.getJogador() == jogador) || (marguerita.getJogador() == jogador) || (portuguesa.getJogador() == jogador))
 					System.out.println("O Jogador "+ jogador + " não precisa de cebola!" );
 				if(romana.getJogador() == jogador){
-					romana.perdeIngredienteX("cebola");
 					System.out.println("O Jogador "+ jogador + " pegou cebola!" );
-					if(romana.verificaSeGanhou())
-						ninguemGanhou = false;				
+					romana.perdeIngredienteX("cebola");
 				}
 				if(toscana.getJogador() == jogador){
-					toscana.perdeIngredienteX("cebola");
 					System.out.println("O Jogador "+ jogador + " pegou cebola!" );
-					if(toscana.verificaSeGanhou())
-						ninguemGanhou = false;
+					toscana.perdeIngredienteX("cebola");
 				}
 				if(vegetariana.getJogador() == jogador){
-					vegetariana.perdeIngredienteX("cebola");
 					System.out.println("O Jogador "+ jogador + " pegou cebola!" );
-					if(vegetariana.verificaSeGanhou())
-						ninguemGanhou = false;
+					vegetariana.perdeIngredienteX("cebola");
 				}
 				break;
 			case "CALABRESA":
 				if((portuguesa.getJogador() == jogador) || (romana.getJogador() == jogador) || (vegetariana.getJogador() == jogador))
 					System.out.println("O Jogador "+ jogador + " não precisa de calabresa!" );
 				if(calabresa.getJogador() == jogador){
-					calabresa.perdeIngredienteX("calabresa");
 					System.out.println("O Jogador "+ jogador + " pegou calabresa!" );
-					if(calabresa.verificaSeGanhou())
-						ninguemGanhou = false;
+					calabresa.perdeIngredienteX("calabresa");
 				}
 				if(toscana.getJogador() == jogador){
-					toscana.perdeIngredienteX("calabresa");
 					System.out.println("O Jogador "+ jogador + " pegou calabresa!" );
-					if(toscana.verificaSeGanhou())
-						ninguemGanhou = false;
+					toscana.perdeIngredienteX("calabresa");
 				}
 				if(marguerita.getJogador() == jogador){
-					marguerita.perdeIngredienteX("calabresa");
 					System.out.println("O Jogador "+ jogador + " pegou calabresa!" );
-					if(marguerita.verificaSeGanhou())
-						ninguemGanhou = false;
+					marguerita.perdeIngredienteX("calabresa");
 				}
 				break;
 			case "QUEIJO":
 				if((calabresa.getJogador() == jogador) || (toscana.getJogador() == jogador) || (vegetariana.getJogador() == jogador))
 					System.out.println("O Jogador "+ jogador + " não precisa de queijo!" );
 				if(marguerita.getJogador() == jogador){
-					marguerita.perdeIngredienteX("queijo");
 					System.out.println("O Jogador "+ jogador + " pegou queijo!" );
-					if(marguerita.verificaSeGanhou())
-						ninguemGanhou = false;
+					marguerita.perdeIngredienteX("queijo");
 				}
 				if(portuguesa.getJogador() == jogador){
-					portuguesa.perdeIngredienteX("queijo");
 					System.out.println("O Jogador "+ jogador + " pegou queijo!" );
-					if(portuguesa.verificaSeGanhou())
-						ninguemGanhou = false;
+					portuguesa.perdeIngredienteX("queijo");
 				}
 				if(romana.getJogador() == jogador){
-					romana.perdeIngredienteX("queijo");
 					System.out.println("O Jogador "+ jogador + " pegou queijo!" );
-					if(romana.verificaSeGanhou())
-						ninguemGanhou = false;
+					romana.perdeIngredienteX("queijo");
 				}
 				break;
 			case "TOMATE":
 				if((calabresa.getJogador() == jogador) || (portuguesa.getJogador() == jogador) || (romana.getJogador() == jogador))
 					System.out.println("O Jogador "+ jogador + " não precisa de tomate!" );
 				if(marguerita.getJogador() == jogador){
-					marguerita.perdeIngredienteX("tomate");
 					System.out.println("O Jogador "+ jogador + " pegou tomate!" );
-					if(marguerita.verificaSeGanhou())
-						ninguemGanhou = false;
+					marguerita.perdeIngredienteX("tomate");
 				}
 				if(toscana.getJogador() == jogador){
-					toscana.perdeIngredienteX("tomate");
 					System.out.println("O Jogador "+ jogador + " pegou tomate!" );
-					if(toscana.verificaSeGanhou())
-						ninguemGanhou = false;
+					toscana.perdeIngredienteX("tomate");
 				}
 				if(vegetariana.getJogador() == jogador){
-					vegetariana.perdeIngredienteX("tomate");
 					System.out.println("O Jogador "+ jogador + " pegou tomate!" );
-					if(vegetariana.verificaSeGanhou())
-						ninguemGanhou = false;
+					vegetariana.perdeIngredienteX("tomate");
 				}
 				break;
 			case "OVOS":
 				if((marguerita.getJogador() == jogador) || (toscana.getJogador() == jogador) || (romana.getJogador() == jogador))
 					System.out.println("O Jogador "+ jogador + " não precisa de ovos!" );
 				if(calabresa.getJogador() == jogador){
-					calabresa.perdeIngredienteX("ovos");
 					System.out.println("O Jogador "+ jogador + " pegou ovos!" );
-					if(calabresa.verificaSeGanhou())
-						ninguemGanhou = false;
+					calabresa.perdeIngredienteX("ovos");
 				}
 				if(portuguesa.getJogador() == jogador){
-					portuguesa.perdeIngredienteX("ovos");
 					System.out.println("O Jogador "+ jogador + " pegou ovos!" );
-					if(portuguesa.verificaSeGanhou())
-						ninguemGanhou = false;
+					portuguesa.perdeIngredienteX("ovos");
 				}
 				if(vegetariana.getJogador() == jogador){
-					vegetariana.perdeIngredienteX("ovos");
 					System.out.println("O Jogador "+ jogador + " pegou ovos!" );
-					if(vegetariana.verificaSeGanhou())
-						ninguemGanhou = false;
+					vegetariana.perdeIngredienteX("ovos");
 				}
 				break;
 			case "AZEITONA":
 				if((marguerita.getJogador() == jogador) || (vegetariana.getJogador() == jogador) || (romana.getJogador() == jogador))
 					System.out.println("O Jogador "+ jogador + " não precisa de azeitona!" );
 				if(calabresa.getJogador() == jogador){
-					calabresa.perdeIngredienteX("azeitona");
 					System.out.println("O Jogador "+ jogador + " pegou azeitona!" );
-					if(calabresa.verificaSeGanhou())
-						ninguemGanhou = false;
+					calabresa.perdeIngredienteX("azeitona");
 				}
 				if(portuguesa.getJogador() == jogador){
-					portuguesa.perdeIngredienteX("azeitona");
 					System.out.println("O Jogador "+ jogador + " pegou azeitona!" );
-					if(portuguesa.verificaSeGanhou())
-						ninguemGanhou = false;
+					portuguesa.perdeIngredienteX("azeitona");
 				}
 				if(toscana.getJogador() == jogador){
-					toscana.perdeIngredienteX("azeitona");
 					System.out.println("O Jogador "+ jogador + " pegou azeitona!" );
-					if(toscana.verificaSeGanhou())
-						ninguemGanhou = false;
+					toscana.perdeIngredienteX("azeitona");
 				}
 				break;
 			case "MILHO":
 				if((calabresa.getJogador() == jogador) || (vegetariana.getJogador() == jogador) || (toscana.getJogador() == jogador))
 					System.out.println("O Jogador "+ jogador + " não precisa de milho!" );
 				if(marguerita.getJogador() == jogador){
-					marguerita.perdeIngredienteX("milho");
 					System.out.println("O Jogador "+ jogador + " pegou milho!" );
-					if(marguerita.verificaSeGanhou())
-						ninguemGanhou = false;
+					marguerita.perdeIngredienteX("milho");
 				}
 				if(portuguesa.getJogador() == jogador){
-					portuguesa.perdeIngredienteX("milho");
 					System.out.println("O Jogador "+ jogador + " pegou milho!" );
-					if(portuguesa.verificaSeGanhou())
-						ninguemGanhou = false;
+					portuguesa.perdeIngredienteX("milho");
 				}
 				if(romana.getJogador() == jogador){
-					romana.perdeIngredienteX("milho");
 					System.out.println("O Jogador "+ jogador + " pegou milho!" );
-					if(romana.verificaSeGanhou())
-						ninguemGanhou = false;
+					romana.perdeIngredienteX("milho");
 				}
 				break;
 			case "PRESUNTO":
 				if((calabresa.getJogador() == jogador) || (marguerita.getJogador() == jogador) || (vegetariana.getJogador() == jogador))
 					System.out.println("O Jogador "+ jogador + " não precisa de presunto!" );
 				if(portuguesa.getJogador() == jogador){
-					portuguesa.perdeIngredienteX("presunto");
 					System.out.println("O Jogador "+ jogador + " pegou presunto!" );
-					if(portuguesa.verificaSeGanhou())
-						ninguemGanhou = false;
+					portuguesa.perdeIngredienteX("presunto");
 				}
 				if(romana.getJogador() == jogador){
-					romana.perdeIngredienteX("presunto");
 					System.out.println("O Jogador "+ jogador + " pegou presunto!" );
-					if(romana.verificaSeGanhou())
-						ninguemGanhou = false;
+					romana.perdeIngredienteX("presunto");
 				}
 				if(toscana.getJogador() == jogador){
-					toscana.perdeIngredienteX("presunto");
 					System.out.println("O Jogador "+ jogador + " pegou presunto!" );
-					if(toscana.verificaSeGanhou())
-						ninguemGanhou = false;
+					toscana.perdeIngredienteX("presunto");
 				}
 				break;
 			case "BROCOLIS":
 				if((portuguesa.getJogador() == jogador) || (romana.getJogador() == jogador) || (toscana.getJogador() == jogador))
 					System.out.println("O Jogador "+ jogador + " não precisa de brocolis!" );
 				if(calabresa.getJogador() == jogador){
-					calabresa.perdeIngredienteX("brocolis");
 					System.out.println("O Jogador "+ jogador + " pegou brócolis!");
-					if(calabresa.verificaSeGanhou())
-						ninguemGanhou = false;
+					calabresa.perdeIngredienteX("brocolis");
 				}
 				if(marguerita.getJogador() == jogador){
-					marguerita.perdeIngredienteX("brocolis");
 					System.out.println("O Jogador "+ jogador + " pegou brócolis!");
-					if(marguerita.verificaSeGanhou())
-						ninguemGanhou = false;
+					marguerita.perdeIngredienteX("brocolis");
 				}
 				if(vegetariana.getJogador() == jogador){
-					vegetariana.perdeIngredienteX("brocolis");
 					System.out.println("O Jogador "+ jogador + " pegou brócolis!");
-					if(vegetariana.verificaSeGanhou())
-						ninguemGanhou = false;
+					vegetariana.perdeIngredienteX("brocolis");
 				}
 				break;
 			case "ERVILHA":
 				if((marguerita.getJogador() == jogador) || (portuguesa.getJogador() == jogador) || (toscana.getJogador() == jogador))
 					System.out.println("O Jogador "+ jogador + " não precisa de ervilha!" );
 				if(calabresa.getJogador() == jogador){
-					calabresa.perdeIngredienteX("ervilha");
 					System.out.println("O Jogador "+ jogador + " pegou ervilha!");
-					if(calabresa.verificaSeGanhou())
-						ninguemGanhou = false;
+					calabresa.perdeIngredienteX("ervilha");
 				}
 				if(romana.getJogador() == jogador){
-					romana.perdeIngredienteX("ervilha");
 					System.out.println("O Jogador "+ jogador + " pegou ervilha!");
-					if(romana.verificaSeGanhou())
-						ninguemGanhou = false;
+					romana.perdeIngredienteX("ervilha");
 				}
 				if(vegetariana.getJogador() == jogador){
-					vegetariana.perdeIngredienteX("ervilha");
 					System.out.println("O Jogador "+ jogador + " pegou ervilha!");
-					if(vegetariana.verificaSeGanhou())
-						ninguemGanhou = false;
+					vegetariana.perdeIngredienteX("ervilha");
 				}
 				break;
 			}
 		}
 	}
 	
-	private static void rodada(int nJogadores){
-		for (int i = 1; i < nJogadores+1; i++) {
-			if(nJogadores >=2 ){	
-				j1 = j1 + dado(i);
-				if(j1 > 35){
-					j1 = j1 - 35;
-				}
-				verifica(tabuleiro.moveParaPosicao(j1).getNomeEtapa() , i); ////verificar
-				System.out.println("Jogador 1 esta na posicao: "+j1);
-				i++;
-				j2 = j2 + dado(i);
-				if(j2 > 35){
-					j2 = j2 - 35;
-				}
-				System.out.println("Jogador 2 esta na posicao: "+j2);
-				i++;
-			}
-			if(nJogadores >= 3){
-				j3 = j3 + dado(i);
-				if(j3 > 35){
-					j3 = j3 - 35;
-				}
-				System.out.println("Jogador 3 esta na posicao: "+j3);
-				i++;
-
-			}
-			if(nJogadores >= 4){
-				j4 = j4 + dado(i);
-				if(j4 > 35){
-					j4 = j4 - 35;
-				}
-				System.out.println("Jogador 4 esta na posicao: "+j4);
-				i++;
-			}
-			if(nJogadores == 5){
-				j5 = j5 + dado(i);
-				if(j5 > 35){
-					j5 = j5 - 35;
-				}
-				System.out.println("Jogador 5 esta na posicao: "+j5);
-				i++;
-			}
-		}		
-	}
+	private static void rodada(int jogador){
+		switch (jogador) {
+		case 1:
+			j1 = j1 + dado(jogador);
+			if(j1 > 35)
+				j1 = j1 - 35;
+			verifica(tabuleiro.moveParaPosicao(j1).getNomeEtapa() , jogador); ////verificar
+			System.out.println("Jogador 1 esta na posicao: "+j1);
+			break;
+		case 2:
+			j2 = j2 + dado(jogador);
+			if(j2 > 35)
+				j2 = j2 - 35;
+			verifica(tabuleiro.moveParaPosicao(j2).getNomeEtapa() , jogador); ////verificar
+			System.out.println("Jogador 2 esta na posicao: "+j2);
+			
+			break;
+		case 3:
+			j3 = j3 + dado(jogador);
+			if(j3 > 35)
+				j3 = j3 - 35;
+			verifica(tabuleiro.moveParaPosicao(j3).getNomeEtapa() , jogador); ////verificar
+			System.out.println("Jogador 3 esta na posicao: "+j3);
+			
+			break;
+		case 4:
+			j4 = j4 + dado(jogador);
+			if(j4 > 35)
+				j4 = j4 - 35;
+			verifica(tabuleiro.moveParaPosicao(j4).getNomeEtapa() , jogador); ////verificar
+			System.out.println("Jogador 4 esta na posicao: "+j4);
 	
+			break;
+		case 5:
+			j5 = j5 + dado(jogador);
+			if(j5 > 35)
+				j5 = j5 - 35;
+			verifica(tabuleiro.moveParaPosicao(j5).getNomeEtapa() , jogador); ////verificar
+			System.out.println("Jogador 5 esta na posicao: "+j5);
+	
+			break;
+		}
+	}
+
 	private static int dado(int jogador){
 		JOptionPane.showMessageDialog(null, "Jogador "+ jogador + " jogue o dado!");
 		Random dado = new Random();

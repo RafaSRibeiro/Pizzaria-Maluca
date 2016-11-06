@@ -7,7 +7,16 @@ public class PizzaCalabresa {
 	int Jogador;
 	int qt;
 	ArrayList<String>faltam = new ArrayList<>();
+	boolean rodadaSemJogar;//Sorte ou Azar
 	
+	public boolean isRodadaSemJogar() {
+		return rodadaSemJogar;
+	}
+
+	public void setRodadaSemJogar(boolean rodadaSemJogar) {
+		this.rodadaSemJogar = rodadaSemJogar;
+	}
+
 	public int getQt() {
 		return qt;
 	}
@@ -26,19 +35,19 @@ public class PizzaCalabresa {
 
 	public ArrayList<String> faltamEssesIngredientes(){
 		ArrayList<String> ingredientes = new ArrayList<>();
-		ingredientes.add("Calabresa");
-		ingredientes.add("Azeitona");
-		ingredientes.add("Brocolis");
-		ingredientes.add("Ovos");
 		ingredientes.add("Ervilha");
+		ingredientes.add("Ovos");
+		ingredientes.add("Brocolis");
+		ingredientes.add("Azeitona");
+		ingredientes.add("Calabresa");
 
 		faltam.clear();
 		
 		for(int j = 0; j<ingredientes.size() ; j++){
 			String ing = ingredientes.get(j);
-			for(int i = 0; i<lista.comprimento(); i++){
-				if(ing.equalsIgnoreCase(lista.elementoNaPosicao(i).getNomeEtapa())){
-					faltam.add(ingredientes.get(j));
+			for(int i = 1; i<this.lista.comprimento()+1; i++){
+				if(ing.equalsIgnoreCase(this.lista.elementoNaPosicao(i).getNomeEtapa())){
+					this.faltam.add(ingredientes.get(j));
 					ingredientes.remove(j);
 					j--;
 				}
@@ -57,6 +66,7 @@ public class PizzaCalabresa {
 		lista.inserePrimeiro("ervilha", 0);
 		setJogador(jogador);
 		setQt(5);
+		setRodadaSemJogar(false);
 	}
 	
 
@@ -77,14 +87,14 @@ public class PizzaCalabresa {
 	public void perdeIngredienteX(String elemento) {
 			lista.removeElemento(elemento);
 			setQt(getQt()-1);
+			verificaSeGanhou();
 	}
 	
-	public boolean verificaSeGanhou(){
+	public void verificaSeGanhou(){
 		if(getQt() == 0){
 			System.out.println("O Jogador "+getJogador() +"ganhou!");
-			return true;
+			System.exit(0);
 		}
-		return false;
 	}
 
 }

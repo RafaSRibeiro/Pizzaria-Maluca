@@ -100,8 +100,9 @@ public class ListaDupla {
        atual = atual.proximo;
        cont ++;
      }
-     if (atual != null)
-        return cont;
+     if (atual != null && atual.nomeEtapa.equalsIgnoreCase(n)){
+    	 	return cont;
+     }
      return -1;
 	}
 	
