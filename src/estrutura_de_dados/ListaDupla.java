@@ -128,22 +128,12 @@ public class ListaDupla {
 // Remove da lista o elemento indicado
 	public void removeElemento(String elemento){
 		int pos;
-		NoProjetoDupla temp;    //criado temp2
+		NoProjetoDupla temp;
 		pos = buscaElemento(elemento);
 		if(pos == 0){
 			removePrimeiro();
 		}
 		else if (pos > 0){
-//			temp1 = atual.proximo;
-//			temp2 = atual.anterior;
-//			temp1.anterior = temp2;
-//			temp2.proximo = temp1;
-//		
-//			moveParaPosicao(pos-1);
-//			atual.proximo=temp1;
-//			
-//			moveParaPosicao(pos+1);
-
 			temp = atual; /* temporario aponta para o nó encontrado */  
 	        if(atual.anterior != null)/* caso haja um nó anterior ao enontrado*/
 	        		atual.anterior.proximo = atual.proximo; /* faz o nó anterior apontar para o nó posterior ao encontrado */

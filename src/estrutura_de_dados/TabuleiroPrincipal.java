@@ -19,48 +19,6 @@ public class TabuleiroPrincipal {
 	static Pilha cartas = new Pilha();
 	static ListaSimplesCartas auxCartas = new ListaSimplesCartas();	
 
-	//cria cartas sorte ou azar
-	public static void SorteOuAzar(){
-		
-		//coloca as cartas em uma listasimples primeiro para depois embaralhar
-		auxCartas.insereUltimo(new SorteOuAzar("Pegue um ingrediente de sua escolha (Sorte)", 0));
-		auxCartas.insereUltimo(new SorteOuAzar("Pegue um ingrediente de sua escolha (Sorte)", 0));
-		auxCartas.insereUltimo(new SorteOuAzar("Pegue um ingrediente de sua escolha (Sorte)", 0));
-		auxCartas.insereUltimo(new SorteOuAzar("Pegue um ingrediente de sua escolha (Sorte)", 0));
-		auxCartas.insereUltimo(new SorteOuAzar("Pegue um ingrediente de sua escolha (Sorte)", 0));
-
-		auxCartas.insereUltimo(new SorteOuAzar("Perca um ingrediente aleatório (Azar)", 4));
-		auxCartas.insereUltimo(new SorteOuAzar("Perca um ingrediente aleatório (Azar)", 4));
-		auxCartas.insereUltimo(new SorteOuAzar("Perca um ingrediente aleatório (Azar)", 4));
-		auxCartas.insereUltimo(new SorteOuAzar("Perca um ingrediente aleatório (Azar)", 4));
-		auxCartas.insereUltimo(new SorteOuAzar("Perca um ingrediente aleatório (Azar)", 4));
-
-		auxCartas.insereUltimo(new SorteOuAzar("Pegue dois ingredientes de sua escolha (Sorte)", 1));
-		auxCartas.insereUltimo(new SorteOuAzar("Pegue dois ingredientes de sua escolha (Sorte)", 1));
-		
-		auxCartas.insereUltimo(new SorteOuAzar("Sua pizza queimou, perca todos os ingredientes (Azar)", 5));
-		auxCartas.insereUltimo(new SorteOuAzar("Sua pizza queimou, perca todos os ingredientes (Azar)", 5));
-
-		auxCartas.insereUltimo(new SorteOuAzar("Jogue os dados novamente (Sorte)", 2));
-		auxCartas.insereUltimo(new SorteOuAzar("Jogue os dados novamente (Sorte)", 2));
-		auxCartas.insereUltimo(new SorteOuAzar("Jogue os dados novamente (Sorte)", 2));
-
-		auxCartas.insereUltimo(new SorteOuAzar("Fique sem jogar por 1 rodada (Azar)", 3));
-		auxCartas.insereUltimo(new SorteOuAzar("Fique sem jogar por 1 rodada (Azar)", 3));
-		auxCartas.insereUltimo(new SorteOuAzar("Fique sem jogar por 1 rodada (Azar)", 3));
-	
-		
-		//pega da lista simples e coloca na pilha aleatoriamente
-		for(int i = 0 ; i<20 ; i++){
-			Random n = new Random();
-			int num = n.nextInt(auxCartas.comprimento());
-			SorteOuAzar cartaEscolhida = auxCartas.retornaDaPosicao(num);
-			cartas.empilha(cartaEscolhida);
-			auxCartas.removeNaPosicao(num);
-			
-		}	
-	}
-			
 	public static void main(String[] args) {
 		int nJogadores = menuJogo();
 		
@@ -168,20 +126,63 @@ public class TabuleiroPrincipal {
 				}
 				
 				rodada(i);	
-
+				
 				if(jogaDadoNovamente){//Se o jogador pega a carta de jogar novamente
 					i--;
 					jogaDadoNovamente = false;
 				}
 				
-					
+				
 			}
 		}
 		
 	}
 	
+	//cria cartas sorte ou azar
+	public static void SorteOuAzar(){
+		
+		//coloca as cartas em uma listasimples primeiro para depois embaralhar
+		auxCartas.insereUltimo(new SorteOuAzar("Pegue um ingrediente de sua escolha (Sorte)", 0));
+		auxCartas.insereUltimo(new SorteOuAzar("Pegue um ingrediente de sua escolha (Sorte)", 0));
+		auxCartas.insereUltimo(new SorteOuAzar("Pegue um ingrediente de sua escolha (Sorte)", 0));
+		auxCartas.insereUltimo(new SorteOuAzar("Pegue um ingrediente de sua escolha (Sorte)", 0));
+		auxCartas.insereUltimo(new SorteOuAzar("Pegue um ingrediente de sua escolha (Sorte)", 0));
+
+		auxCartas.insereUltimo(new SorteOuAzar("Perca um ingrediente aleatório (Azar)", 4));
+		auxCartas.insereUltimo(new SorteOuAzar("Perca um ingrediente aleatório (Azar)", 4));
+		auxCartas.insereUltimo(new SorteOuAzar("Perca um ingrediente aleatório (Azar)", 4));
+		auxCartas.insereUltimo(new SorteOuAzar("Perca um ingrediente aleatório (Azar)", 4));
+		auxCartas.insereUltimo(new SorteOuAzar("Perca um ingrediente aleatório (Azar)", 4));
+
+		auxCartas.insereUltimo(new SorteOuAzar("Pegue dois ingredientes de sua escolha (Sorte)", 1));
+		auxCartas.insereUltimo(new SorteOuAzar("Pegue dois ingredientes de sua escolha (Sorte)", 1));
+		
+		auxCartas.insereUltimo(new SorteOuAzar("Sua pizza queimou, perca todos os ingredientes (Azar)", 5));
+		auxCartas.insereUltimo(new SorteOuAzar("Sua pizza queimou, perca todos os ingredientes (Azar)", 5));
+
+		auxCartas.insereUltimo(new SorteOuAzar("Jogue os dados novamente (Sorte)", 2));
+		auxCartas.insereUltimo(new SorteOuAzar("Jogue os dados novamente (Sorte)", 2));
+		auxCartas.insereUltimo(new SorteOuAzar("Jogue os dados novamente (Sorte)", 2));
+
+		auxCartas.insereUltimo(new SorteOuAzar("Fique sem jogar por 1 rodada (Azar)", 3));
+		auxCartas.insereUltimo(new SorteOuAzar("Fique sem jogar por 1 rodada (Azar)", 3));
+		auxCartas.insereUltimo(new SorteOuAzar("Fique sem jogar por 1 rodada (Azar)", 3));
+	
+		
+		//pega da lista simples e coloca na pilha aleatoriamente
+		for(int i = 0 ; i<20 ; i++){
+			Random n = new Random();
+			int num = n.nextInt(auxCartas.comprimento());
+			SorteOuAzar cartaEscolhida = auxCartas.retornaDaPosicao(num);
+			cartas.empilha(cartaEscolhida);
+			auxCartas.removeNaPosicao(num);
+			
+		}	
+	}
+			
 	private static void verifica(String posicao, int jogador){
 		if(posicao.equalsIgnoreCase("PERDE TUDO")){
+			System.out.println(" - PERDE TUDO");
 			if(calabresa.getJogador() == jogador){
 				calabresa.limpaPizza();
 				System.out.println("O Jogador "+ jogador + " queimou a pizza e perdeu tudo!" );
@@ -208,6 +209,7 @@ public class TabuleiroPrincipal {
 			}
 		}
 		else if(posicao.equalsIgnoreCase("SORTE OU AZAR")){
+			System.out.println(" - SORTE OU AZAR");
 
 			NoPilha noCarta = cartas.desempilha();
 			SorteOuAzar Ccarta = noCarta.carta;
@@ -230,7 +232,6 @@ public class TabuleiroPrincipal {
 						int op = Integer.parseInt(JOptionPane.showInputDialog(msg));
 						for (int i = 0; i<array.size();i++){
 							if(op-1 == i){
-								System.out.println("Voce pegou: "+ array.get(op-1));
 								calabresa.perdeIngredienteX(array.get(op-1));
 								tenteNovamente = false;
 							}
@@ -256,7 +257,6 @@ public class TabuleiroPrincipal {
 						int op = Integer.parseInt(JOptionPane.showInputDialog(msg));
 						for (int i = 0; i<array.size();i++){
 							if(op-1 == i){
-								System.out.println("Voce pegou: "+ array.get(op-1));
 								marguerita.perdeIngredienteX(array.get(op-1));
 								tenteNovamente = false;
 							}
@@ -281,7 +281,6 @@ public class TabuleiroPrincipal {
 						int op = Integer.parseInt(JOptionPane.showInputDialog(msg));
 						for (int i = 0; i<array.size();i++){
 							if(op-1 == i){
-								System.out.println("Voce pegou: "+ array.get(op-1));
 								portuguesa.perdeIngredienteX(array.get(op-1));
 								tenteNovamente = false;
 							}
@@ -308,7 +307,6 @@ public class TabuleiroPrincipal {
 						int op = Integer.parseInt(JOptionPane.showInputDialog(msg));
 						for (int i = 0; i<array.size();i++){
 							if(op-1 == i){
-								System.out.println("Voce pegou: "+ array.get(op-1));
 								romana.perdeIngredienteX(array.get(op-1));
 								tenteNovamente = false;
 							}
@@ -334,7 +332,6 @@ public class TabuleiroPrincipal {
 						int op = Integer.parseInt(JOptionPane.showInputDialog(msg));
 						for (int i = 0; i<array.size();i++){
 							if(op-1 == i){
-								System.out.println("Voce pegou: "+ array.get(op-1));
 								toscana.perdeIngredienteX(array.get(op-1));
 								tenteNovamente = false;
 							}
@@ -360,7 +357,6 @@ public class TabuleiroPrincipal {
 						int op = Integer.parseInt(JOptionPane.showInputDialog(msg));
 						for (int i = 0; i<array.size();i++){
 							if(op-1 == i){
-								System.out.println("Voce pegou: "+ array.get(op-1));
 								vegetariana.perdeIngredienteX(array.get(op-1));
 								tenteNovamente = false;
 							}
@@ -390,7 +386,6 @@ public class TabuleiroPrincipal {
 						int op = Integer.parseInt(JOptionPane.showInputDialog(msg));
 						for (int i = 0; i<array.size();i++){
 							if(op-1 == i){
-								System.out.println("Voce pegou: "+ array.get(op-1));
 								calabresa.perdeIngredienteX(array.get(op-1));
 								tenteNovamente = false;
 							}
@@ -415,7 +410,6 @@ public class TabuleiroPrincipal {
 						int op = Integer.parseInt(JOptionPane.showInputDialog(msg));
 						for (int i = 0; i<array.size();i++){
 							if(op-1 == i){
-								System.out.println("Voce pegou: "+ array.get(op-1));
 								calabresa.perdeIngredienteX(array.get(op-1));
 								tenteNovamente = false;
 							}
@@ -440,7 +434,6 @@ public class TabuleiroPrincipal {
 						int op = Integer.parseInt(JOptionPane.showInputDialog(msg));
 						for (int i = 0; i<array.size();i++){
 							if(op-1 == i){
-								System.out.println("Voce pegou: "+ array.get(op-1));
 								marguerita.perdeIngredienteX(array.get(op-1));
 								tenteNovamente = false;
 							}
@@ -464,7 +457,6 @@ public class TabuleiroPrincipal {
 						int op = Integer.parseInt(JOptionPane.showInputDialog(msg));
 						for (int i = 0; i<array.size();i++){
 							if(op-1 == i){
-								System.out.println("Voce pegou: "+ array.get(op-1));
 								marguerita.perdeIngredienteX(array.get(op-1));
 								tenteNovamente = false;
 							}
@@ -490,7 +482,6 @@ public class TabuleiroPrincipal {
 						int op = Integer.parseInt(JOptionPane.showInputDialog(msg));
 						for (int i = 0; i<array.size();i++){
 							if(op-1 == i){
-								System.out.println("Voce pegou: "+ array.get(op-1));
 								portuguesa.perdeIngredienteX(array.get(op-1));
 								tenteNovamente = false;
 							}
@@ -516,7 +507,6 @@ public class TabuleiroPrincipal {
 						int op = Integer.parseInt(JOptionPane.showInputDialog(msg));
 						for (int i = 0; i<array.size();i++){
 							if(op-1 == i){
-								System.out.println("Voce pegou: "+ array.get(op-1));
 								portuguesa.perdeIngredienteX(array.get(op-1));
 								tenteNovamente = false;
 							}
@@ -543,7 +533,6 @@ public class TabuleiroPrincipal {
 						int op = Integer.parseInt(JOptionPane.showInputDialog(msg));
 						for (int i = 0; i<array.size();i++){
 							if(op-1 == i){
-								System.out.println("Voce pegou: "+ array.get(op-1));
 								romana.perdeIngredienteX(array.get(op-1));
 								tenteNovamente = false;
 							}
@@ -568,7 +557,6 @@ public class TabuleiroPrincipal {
 						int op = Integer.parseInt(JOptionPane.showInputDialog(msg));
 						for (int i = 0; i<array.size();i++){
 							if(op-1 == i){
-								System.out.println("Voce pegou: "+ array.get(op-1));
 								romana.perdeIngredienteX(array.get(op-1));
 								tenteNovamente = false;
 							}
@@ -595,7 +583,6 @@ public class TabuleiroPrincipal {
 						int op = Integer.parseInt(JOptionPane.showInputDialog(msg));
 						for (int i = 0; i<array.size();i++){
 							if(op-1 == i){
-								System.out.println("Voce pegou: "+ array.get(op-1));
 								toscana.perdeIngredienteX(array.get(op-1));
 								tenteNovamente = false;
 							}
@@ -620,7 +607,6 @@ public class TabuleiroPrincipal {
 						int op = Integer.parseInt(JOptionPane.showInputDialog(msg));
 						for (int i = 0; i<array.size();i++){
 							if(op-1 == i){
-								System.out.println("Voce pegou: "+ array.get(op-1));
 								toscana.perdeIngredienteX(array.get(op-1));
 								tenteNovamente = false;
 							}
@@ -647,7 +633,6 @@ public class TabuleiroPrincipal {
 						int op = Integer.parseInt(JOptionPane.showInputDialog(msg));
 						for (int i = 0; i<array.size();i++){
 							if(op-1 == i){
-								System.out.println("Voce pegou: "+ array.get(op-1));
 								vegetariana.perdeIngredienteX(array.get(op-1));
 								tenteNovamente = false;
 							}
@@ -672,7 +657,6 @@ public class TabuleiroPrincipal {
 						int op = Integer.parseInt(JOptionPane.showInputDialog(msg));
 						for (int i = 0; i<array.size();i++){
 							if(op-1 == i){
-								System.out.println("Voce pegou: "+ array.get(op-1));
 								vegetariana.perdeIngredienteX(array.get(op-1));
 								tenteNovamente = false;
 							}
@@ -789,6 +773,7 @@ public class TabuleiroPrincipal {
 		else{
 			switch (posicao) {
 			case "CEBOLA":
+				System.out.println(" - CEBOLA");
 				if((calabresa.getJogador() == jogador) || (marguerita.getJogador() == jogador) || (portuguesa.getJogador() == jogador)){
 					System.out.println("O Jogador "+ jogador + " não precisa de cebola!" );
 				}
@@ -803,6 +788,7 @@ public class TabuleiroPrincipal {
 				}
 				break;
 			case "CALABRESA":
+				System.out.println(" - CALABRESA");
 				if((portuguesa.getJogador() == jogador) || (romana.getJogador() == jogador) || (vegetariana.getJogador() == jogador))
 					System.out.println("O Jogador "+ jogador + " não precisa de calabresa!" );
 				if(calabresa.getJogador() == jogador){
@@ -816,6 +802,7 @@ public class TabuleiroPrincipal {
 				}
 				break;
 			case "QUEIJO":
+				System.out.println(" - QUEIJO");
 				if((calabresa.getJogador() == jogador) || (toscana.getJogador() == jogador) || (vegetariana.getJogador() == jogador))
 					System.out.println("O Jogador "+ jogador + " não precisa de queijo!" );
 				if(marguerita.getJogador() == jogador){
@@ -829,6 +816,7 @@ public class TabuleiroPrincipal {
 				}
 				break;
 			case "TOMATE":
+				System.out.println(" - TOMATE");
 				if((calabresa.getJogador() == jogador) || (portuguesa.getJogador() == jogador) || (romana.getJogador() == jogador))
 					System.out.println("O Jogador "+ jogador + " não precisa de tomate!" );
 				if(marguerita.getJogador() == jogador){
@@ -842,6 +830,7 @@ public class TabuleiroPrincipal {
 				}
 				break;
 			case "OVOS":
+				System.out.println(" - OVOS");
 				if((marguerita.getJogador() == jogador) || (toscana.getJogador() == jogador) || (romana.getJogador() == jogador))
 					System.out.println("O Jogador "+ jogador + " não precisa de ovos!" );
 				if(calabresa.getJogador() == jogador){
@@ -855,6 +844,7 @@ public class TabuleiroPrincipal {
 				}
 				break;
 			case "AZEITONA":
+				System.out.println(" - AZEITONA");
 				if((marguerita.getJogador() == jogador) || (vegetariana.getJogador() == jogador) || (romana.getJogador() == jogador))
 					System.out.println("O Jogador "+ jogador + " não precisa de azeitona!" );
 				if(calabresa.getJogador() == jogador){
@@ -868,6 +858,7 @@ public class TabuleiroPrincipal {
 				}
 				break;
 			case "MILHO":
+				System.out.println(" - MILHO");
 				if((calabresa.getJogador() == jogador) || (vegetariana.getJogador() == jogador) || (toscana.getJogador() == jogador))
 					System.out.println("O Jogador "+ jogador + " não precisa de milho!" );
 				if(marguerita.getJogador() == jogador){
@@ -881,6 +872,7 @@ public class TabuleiroPrincipal {
 				}
 				break;
 			case "PRESUNTO":
+				System.out.println(" - PRESUNTO");
 				if((calabresa.getJogador() == jogador) || (marguerita.getJogador() == jogador) || (vegetariana.getJogador() == jogador))
 					System.out.println("O Jogador "+ jogador + " não precisa de presunto!" );
 				if(portuguesa.getJogador() == jogador){
@@ -894,6 +886,7 @@ public class TabuleiroPrincipal {
 				}
 				break;
 			case "BROCOLIS":
+				System.out.println(" - BROCOLIS");
 				if((portuguesa.getJogador() == jogador) || (romana.getJogador() == jogador) || (toscana.getJogador() == jogador))
 					System.out.println("O Jogador "+ jogador + " não precisa de brocolis!" );
 				if(calabresa.getJogador() == jogador){
@@ -907,6 +900,7 @@ public class TabuleiroPrincipal {
 				}
 				break;
 			case "ERVILHA":
+				System.out.println(" - ERVILHA");
 				if((marguerita.getJogador() == jogador) || (portuguesa.getJogador() == jogador) || (toscana.getJogador() == jogador))
 					System.out.println("O Jogador "+ jogador + " não precisa de ervilha!" );
 				if(calabresa.getJogador() == jogador){
@@ -929,40 +923,37 @@ public class TabuleiroPrincipal {
 			j1 = j1 + dado(jogador);
 			if(j1 > 35)
 				j1 = j1 - 35;
+			System.out.print("-Jogador 1 esta na posicao: "+j1);
 			verifica(tabuleiro.moveParaPosicao(j1).getNomeEtapa() , jogador); ////verificar
-			System.out.println("Jogador 1 esta na posicao: "+j1);
 			break;
 		case 2:
 			j2 = j2 + dado(jogador);
 			if(j2 > 35)
 				j2 = j2 - 35;
+			System.out.print("-Jogador 2 esta na posicao: "+j2);
 			verifica(tabuleiro.moveParaPosicao(j2).getNomeEtapa() , jogador); ////verificar
-			System.out.println("Jogador 2 esta na posicao: "+j2);
 			
 			break;
 		case 3:
 			j3 = j3 + dado(jogador);
 			if(j3 > 35)
 				j3 = j3 - 35;
+			System.out.print("-Jogador 3 esta na posicao: "+j3);
 			verifica(tabuleiro.moveParaPosicao(j3).getNomeEtapa() , jogador); ////verificar
-			System.out.println("Jogador 3 esta na posicao: "+j3);
-			
 			break;
 		case 4:
 			j4 = j4 + dado(jogador);
 			if(j4 > 35)
 				j4 = j4 - 35;
+			System.out.print("-Jogador 4 esta na posicao: "+j4);
 			verifica(tabuleiro.moveParaPosicao(j4).getNomeEtapa() , jogador); ////verificar
-			System.out.println("Jogador 4 esta na posicao: "+j4);
-	
 			break;
 		case 5:
 			j5 = j5 + dado(jogador);
 			if(j5 > 35)
 				j5 = j5 - 35;
+			System.out.print("-Jogador 5 esta na posicao: "+j5);
 			verifica(tabuleiro.moveParaPosicao(j5).getNomeEtapa() , jogador); ////verificar
-			System.out.println("Jogador 5 esta na posicao: "+j5);
-	
 			break;
 		}
 	}
@@ -971,7 +962,7 @@ public class TabuleiroPrincipal {
 		JOptionPane.showMessageDialog(null, "Jogador "+ jogador + " jogue o dado!");
 		Random dado = new Random();
 		int num = dado.nextInt(6) + 1;
-		System.out.println("Jogador "+ jogador + " anda " +num+ " posições.");
+		System.out.println("-Jogador "+ jogador + " tirou " +num+ "!");
 		return num;		 
 	}
 	
@@ -1021,13 +1012,42 @@ public class TabuleiroPrincipal {
 		listaJogadores.inserePrimeiro("j2", 0);
 		listaJogadores.inserePrimeiro("j1", 0);
 		
-		System.out.println("1 - PERDE TUDO	2 - CEBOLA	3 - SORTE OU AZAR	4 -CALABRESA	5 - QUEIJO	\n"
-				+ "6 - SORTE OU AZAR	7 - SORTE OU AZAR 8 - TOMATE	9 - OVOS	  10 - AZEITONA\n"
-				+ "11 - SORTE OU AZAR	12 - SORTE OU AZAR	13 - MILHO	14 - ERVILHA15 - SORTE OU AZAR	\n"
-				+ "16 - PRESUNTO	17 - TOMATE	18 - MILHO	19 - SORTE OU AZAR	20 - SORTE OU AZAR	\n"
-				+ "21 - BROCOLIS 22 - SORTE OU AZAR	23 - OVOS	24 - CEBOLA	25 - SORTE OU AZAR	\n"
-				+ "26 - CALABRESA	27 - SORTE OU AZAR	28 - PRESUNTO29 - SORTE OU AZAR	\n"
-				+ "30 - QUEIJO	31 - ERVILHA	32 - SORTE OU AZAR	33 - BROCOLIS	34 - AZEITONA	35 - SORTE OU AZAR\n");
+		System.out.println("TABULEIRO:\n"
+				+ "1 - PERDE TUDO\n"
+				+ "2 - CEBOLA\n"
+				+ "3 - SORTE OU AZAR\n"
+				+ "4 - CALABRESA\n"
+				+ "5 - QUEIJO\n"
+				+ "6 - SORTE OU AZAR\n"
+				+ "7 - SORTE OU AZAR\n"
+				+ "8 - TOMATE\n"
+				+ "9 - OVOS\n"
+				+ "10 - AZEITONA\n"
+				+ "11 - SORTE OU AZAR\n"
+				+ "12 - SORTE OU AZAR\n"
+				+ "13 - MILHO\n"
+				+ "14 - ERVILHA\n"
+				+ "15 - SORTE OU AZAR\n"
+				+ "16 - PRESUNTO\n"
+				+ "17 - TOMATE\n"
+				+ "18 - MILHO\n"
+				+ "19 - SORTE OU AZAR\n"
+				+ "20 - SORTE OU AZAR\n"
+				+ "21 - BROCOLIS\n"
+				+ "22 - SORTE OU AZAR\n"
+				+ "23 - OVOS\n"
+				+ "24 - CEBOLA\n"
+				+ "25 - SORTE OU AZAR\n"
+				+ "26 - CALABRESA\n"
+				+ "27 - SORTE OU AZAR\n"
+				+ "28 - PRESUNTO\n"
+				+ "29 - SORTE OU AZAR\n"
+				+ "30 - QUEIJO\n"
+				+ "31 - ERVILHA\n"
+				+ "32 - SORTE OU AZAR\n"
+				+ "33 - BROCOLIS\n"
+				+ "34 - AZEITONA\n"
+				+ "35 - SORTE OU AZAR\n");
 		int numJogadores = 0;
 		while(numJogadores<2 || numJogadores>5){
 			numJogadores = Integer.parseInt(JOptionPane.showInputDialog("Numero de jogadores? (2 à 5)")); 		

@@ -3,6 +3,8 @@ package estrutura_de_dados;
 import java.util.ArrayList;
 import java.util.Random;
 
+import javax.swing.JOptionPane;
+
 public class PizzaToscana {
 	ListaDupla lista = new ListaDupla();
 	int Jogador;
@@ -141,6 +143,7 @@ public class PizzaToscana {
 	public void verificaSeGanhou(){
 		if(lista.estaVazio()){
 			System.out.println("O Jogador "+getJogador() +" ganhou!");
+			JOptionPane.showMessageDialog(null, "O Jogador "+getJogador() +" ganhou!");
 			System.exit(0);
 		}
 	}

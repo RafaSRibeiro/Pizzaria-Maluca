@@ -29,12 +29,7 @@ public class Pilha {
 		}
 		else{
 			NoPilha retornaCarta = topo;
-			
 			this.topo = topo.proximo;
-//			return r;
-//			NoPilha aux = topo;
-//			topo = topo.proximo;
-//			aux = null;
 			return retornaCarta;
 		}
 	}

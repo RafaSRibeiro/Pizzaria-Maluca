@@ -3,6 +3,8 @@ package estrutura_de_dados;
 import java.util.ArrayList;
 import java.util.Random;
 
+import javax.swing.JOptionPane;
+
 public class PizzaCalabresa {
 	ListaDupla lista = new ListaDupla();
 	int Jogador;
@@ -73,7 +75,6 @@ public class PizzaCalabresa {
 
 	public void limpaPizza(){
 		while(lista.comprimento() != 0){
-			System.out.println(lista.comprimento());
 			lista.removePrimeiro();
 		}
 		
@@ -145,6 +146,7 @@ public class PizzaCalabresa {
 	public void verificaSeGanhou(){
 		if(getQt() == 0){
 			System.out.println("O Jogador "+getJogador() +" ganhou!");
+			JOptionPane.showMessageDialog(null, "O Jogador "+getJogador() +" ganhou!");
 			System.exit(0);
 		}
 	}

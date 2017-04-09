@@ -11,7 +11,7 @@ public class SorteOuAzar {
 	}
 
 	@Override
-	public String toString() {
+	public String toString() {//testes
 		return texto + "\n" + numero;
 	}
 
