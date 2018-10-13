@@ -1,5 +1,6 @@
-package estrutura_de_dados;
+package pizza;
 
+import library.Pizza;
 import listas.ListaDupla;
 
 import java.util.ArrayList;
@@ -7,7 +8,7 @@ import java.util.Random;
 
 import javax.swing.JOptionPane;
 
-public class PizzaVegetariana {
+public class PizzaVegetariana extends Pizza {
 
 	ListaDupla lista = new ListaDupla();
 
@@ -16,16 +17,6 @@ public class PizzaVegetariana {
 	int qt;
 
 	ArrayList<String>faltam = new ArrayList<>();
-
-	boolean rodadaSemJogar;//Sorte ou Azar
-
-	public boolean isRodadaSemJogar() {
-		return rodadaSemJogar;
-	}
-
-	public void setRodadaSemJogar(boolean rodadaSemJogar) {
-		this.rodadaSemJogar = rodadaSemJogar;
-	}
 
 	public int getQt() {
 		return qt;
@@ -42,6 +33,7 @@ public class PizzaVegetariana {
 	public void setJogador(int jogador) {
 		Jogador = jogador;
 	}
+
 	public ArrayList<String> faltamEssesIngredientes(){
 		ArrayList<String> ingredientes = new ArrayList<>();
 		ingredientes.add("Ovos");

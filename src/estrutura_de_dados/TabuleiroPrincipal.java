@@ -3,6 +3,7 @@ package estrutura_de_dados;
 import listas.ListaDupla;
 import listas.ListaSimples;
 import listas.ListaSimplesCartas;
+import pizza.PizzaVegetariana;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -123,7 +124,7 @@ public class TabuleiroPrincipal {
 					toscana.setRodadaSemJogar(false);
 					i++;
 				}
-				else if(vegetariana.rodadaSemJogar && i == vegetariana.getJogador()){
+				else if(vegetariana.isRodadaSemJogar() && i == vegetariana.getJogador()){
 					System.out.println("Jogador "+i+", essa rodada você não pode jogar!");
 					vegetariana.setRodadaSemJogar(false);
 					i++;
