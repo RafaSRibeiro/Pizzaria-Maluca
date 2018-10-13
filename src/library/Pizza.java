@@ -31,4 +31,14 @@ public abstract class Pizza {
     public void setQuantidade(int quantidade) {
         this.quantidade = quantidade;
     }
+
+    public void addQuantidade(int quantidade) {
+        addQuantidade(quantidade);
+    }
+
+    public void addQuantidade() {
+        addQuantidade(1);
+    }
+
+
 }

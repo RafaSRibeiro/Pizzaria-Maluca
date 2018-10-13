@@ -114,7 +114,7 @@ public class TabuleiroPrincipal {
 					portuguesa.setRodadaSemJogar(false);
 					i++;
 				}
-				else if(romana.rodadaSemJogar && i == romana.getJogador()){
+				else if(romana.isRodadaSemJogar() && i == romana.getJogador()){
 					System.out.println("Jogador "+i+", essa rodada você não pode jogar!");
 					romana.setRodadaSemJogar(false);
 					i++;
