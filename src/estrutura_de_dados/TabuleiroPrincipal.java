@@ -933,7 +933,7 @@ public class TabuleiroPrincipal {
 	}
 
 	private static int dado(int jogador){
-		System.out.println("Jogador " + jogador + " jogou o dado!");
+		JOptionPane.showMessageDialog(null, "Jogador " + jogador + " jogue o dado!");
 		Random dado = new Random();
 		int num = dado.nextInt(6) + 1;
 		System.out.println("-Jogador "+ jogador + " tirou " +num+ "!");
