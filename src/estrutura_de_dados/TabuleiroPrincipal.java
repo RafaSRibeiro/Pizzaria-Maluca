@@ -17,7 +17,7 @@ public class TabuleiroPrincipal {
 	static PizzaVegetariana vegetariana = new PizzaVegetariana(0);
 	static boolean jogaDadoNovamente = false;
 	static Pilha cartas = new Pilha();
-	static ListaSimplesCartas auxCartas = new ListaSimplesCartas();	
+	static ListaSimplesCartas cartasSorteOuAzar = new ListaSimplesCartas();
 
 	public static void main(String[] args) {
 		int nJogadores = menuJogo();
@@ -142,40 +142,40 @@ public class TabuleiroPrincipal {
 	public static void SorteOuAzar(){
 		
 		//coloca as cartas em uma listasimples primeiro para depois embaralhar
-		auxCartas.insereUltimo(new SorteOuAzar("Pegue um ingrediente de sua escolha (Sorte)", 0));
-		auxCartas.insereUltimo(new SorteOuAzar("Pegue um ingrediente de sua escolha (Sorte)", 0));
-		auxCartas.insereUltimo(new SorteOuAzar("Pegue um ingrediente de sua escolha (Sorte)", 0));
-		auxCartas.insereUltimo(new SorteOuAzar("Pegue um ingrediente de sua escolha (Sorte)", 0));
-		auxCartas.insereUltimo(new SorteOuAzar("Pegue um ingrediente de sua escolha (Sorte)", 0));
+		cartasSorteOuAzar.insereUltimo(new SorteOuAzar("Pegue um ingrediente de sua escolha (Sorte)", 0));
+		cartasSorteOuAzar.insereUltimo(new SorteOuAzar("Pegue um ingrediente de sua escolha (Sorte)", 0));
+		cartasSorteOuAzar.insereUltimo(new SorteOuAzar("Pegue um ingrediente de sua escolha (Sorte)", 0));
+		cartasSorteOuAzar.insereUltimo(new SorteOuAzar("Pegue um ingrediente de sua escolha (Sorte)", 0));
+		cartasSorteOuAzar.insereUltimo(new SorteOuAzar("Pegue um ingrediente de sua escolha (Sorte)", 0));
 
-		auxCartas.insereUltimo(new SorteOuAzar("Perca um ingrediente aleatório (Azar)", 4));
-		auxCartas.insereUltimo(new SorteOuAzar("Perca um ingrediente aleatório (Azar)", 4));
-		auxCartas.insereUltimo(new SorteOuAzar("Perca um ingrediente aleatório (Azar)", 4));
-		auxCartas.insereUltimo(new SorteOuAzar("Perca um ingrediente aleatório (Azar)", 4));
-		auxCartas.insereUltimo(new SorteOuAzar("Perca um ingrediente aleatório (Azar)", 4));
+		cartasSorteOuAzar.insereUltimo(new SorteOuAzar("Perca um ingrediente aleatório (Azar)", 4));
+		cartasSorteOuAzar.insereUltimo(new SorteOuAzar("Perca um ingrediente aleatório (Azar)", 4));
+		cartasSorteOuAzar.insereUltimo(new SorteOuAzar("Perca um ingrediente aleatório (Azar)", 4));
+		cartasSorteOuAzar.insereUltimo(new SorteOuAzar("Perca um ingrediente aleatório (Azar)", 4));
+		cartasSorteOuAzar.insereUltimo(new SorteOuAzar("Perca um ingrediente aleatório (Azar)", 4));
 
-		auxCartas.insereUltimo(new SorteOuAzar("Pegue dois ingredientes de sua escolha (Sorte)", 1));
-		auxCartas.insereUltimo(new SorteOuAzar("Pegue dois ingredientes de sua escolha (Sorte)", 1));
+		cartasSorteOuAzar.insereUltimo(new SorteOuAzar("Pegue dois ingredientes de sua escolha (Sorte)", 1));
+		cartasSorteOuAzar.insereUltimo(new SorteOuAzar("Pegue dois ingredientes de sua escolha (Sorte)", 1));
 		
-		auxCartas.insereUltimo(new SorteOuAzar("Sua pizza queimou, perca todos os ingredientes (Azar)", 5));
-		auxCartas.insereUltimo(new SorteOuAzar("Sua pizza queimou, perca todos os ingredientes (Azar)", 5));
+		cartasSorteOuAzar.insereUltimo(new SorteOuAzar("Sua pizza queimou, perca todos os ingredientes (Azar)", 5));
+		cartasSorteOuAzar.insereUltimo(new SorteOuAzar("Sua pizza queimou, perca todos os ingredientes (Azar)", 5));
 
-		auxCartas.insereUltimo(new SorteOuAzar("Jogue os dados novamente (Sorte)", 2));
-		auxCartas.insereUltimo(new SorteOuAzar("Jogue os dados novamente (Sorte)", 2));
-		auxCartas.insereUltimo(new SorteOuAzar("Jogue os dados novamente (Sorte)", 2));
+		cartasSorteOuAzar.insereUltimo(new SorteOuAzar("Jogue os dados novamente (Sorte)", 2));
+		cartasSorteOuAzar.insereUltimo(new SorteOuAzar("Jogue os dados novamente (Sorte)", 2));
+		cartasSorteOuAzar.insereUltimo(new SorteOuAzar("Jogue os dados novamente (Sorte)", 2));
 
-		auxCartas.insereUltimo(new SorteOuAzar("Fique sem jogar por 1 rodada (Azar)", 3));
-		auxCartas.insereUltimo(new SorteOuAzar("Fique sem jogar por 1 rodada (Azar)", 3));
-		auxCartas.insereUltimo(new SorteOuAzar("Fique sem jogar por 1 rodada (Azar)", 3));
+		cartasSorteOuAzar.insereUltimo(new SorteOuAzar("Fique sem jogar por 1 rodada (Azar)", 3));
+		cartasSorteOuAzar.insereUltimo(new SorteOuAzar("Fique sem jogar por 1 rodada (Azar)", 3));
+		cartasSorteOuAzar.insereUltimo(new SorteOuAzar("Fique sem jogar por 1 rodada (Azar)", 3));
 	
 		
 		//pega da lista simples e coloca na pilha aleatoriamente
 		for(int i = 0 ; i<20 ; i++){
 			Random n = new Random();
-			int num = n.nextInt(auxCartas.comprimento());
-			SorteOuAzar cartaEscolhida = auxCartas.retornaDaPosicao(num);
+			int num = n.nextInt(cartasSorteOuAzar.comprimento());
+			SorteOuAzar cartaEscolhida = cartasSorteOuAzar.retornaDaPosicao(num);
 			cartas.empilha(cartaEscolhida);
-			auxCartas.removeNaPosicao(num);
+			cartasSorteOuAzar.removeNaPosicao(num);
 			
 		}	
 	}
