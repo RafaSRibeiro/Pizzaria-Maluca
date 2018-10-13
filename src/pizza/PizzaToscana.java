@@ -1,5 +1,6 @@
-package estrutura_de_dados;
+package pizza;
 
+import library.Pizza;
 import listas.ListaDupla;
 
 import java.util.ArrayList;
@@ -7,7 +8,7 @@ import java.util.Random;
 
 import javax.swing.JOptionPane;
 
-public class PizzaMarguerita {
+public class PizzaToscana extends Pizza {
 
 	ListaDupla lista = new ListaDupla();
 
@@ -16,16 +17,6 @@ public class PizzaMarguerita {
 	int qt;
 
 	ArrayList<String>faltam = new ArrayList<>();
-
-	boolean rodadaSemJogar;//Sorte ou Azar
-	
-	public boolean isRodadaSemJogar() {
-		return rodadaSemJogar;
-	}
-
-	public void setRodadaSemJogar(boolean rodadaSemJogar) {
-		this.rodadaSemJogar = rodadaSemJogar;
-	}
 
 	public int getQt() {
 		return qt;
@@ -42,14 +33,14 @@ public class PizzaMarguerita {
 	public void setJogador(int jogador) {
 		Jogador = jogador;
 	}
-
+	
 	public ArrayList<String> faltamEssesIngredientes(){
 		ArrayList<String> ingredientes = new ArrayList<>();
-		ingredientes.add("Milho");
-		ingredientes.add("Queijo");
-		ingredientes.add("Tomate");
-		ingredientes.add("Brocolis");
+		ingredientes.add("Cebola");
 		ingredientes.add("Calabresa");
+		ingredientes.add("Azeitona");
+		ingredientes.add("Presunto");
+		ingredientes.add("Tomate");
 
 		faltam.clear();
 		
@@ -67,31 +58,28 @@ public class PizzaMarguerita {
 		return faltam;
 	}
 	
-	public PizzaMarguerita(	int jogador){
-		lista.inserePrimeiro("calabresa", 0);
-		lista.inserePrimeiro("brocolis", 0);
+	public PizzaToscana(int jogador){
 		lista.inserePrimeiro("tomate", 0);
-		lista.inserePrimeiro("queijo", 0);
-		lista.inserePrimeiro("milho", 0);
+		lista.inserePrimeiro("presunto", 0);
+		lista.inserePrimeiro("azeitona", 0);
+		lista.inserePrimeiro("calabresa", 0);
+		lista.inserePrimeiro("cebola", 0);
 		setJogador(jogador);
 		setQt(5);
 		setRodadaSemJogar(false);
 
 	}
 	
-
 	public void limpaPizza(){
 		for(int i = 0; i < getQt(); i++)
 			lista.removePrimeiro();
 		
-		lista.inserePrimeiro("calabresa", 0);
-		lista.inserePrimeiro("brocolis", 0);
 		lista.inserePrimeiro("tomate", 0);
-		lista.inserePrimeiro("queijo", 0);
-		lista.inserePrimeiro("milho", 0);
-		
+		lista.inserePrimeiro("presunto", 0);
+		lista.inserePrimeiro("azeitona", 0);
+		lista.inserePrimeiro("calabresa", 0);
+		lista.inserePrimeiro("cebola", 0);
 		setQt(5);
-
 	}
 	
 	public void perdeIngredienteX(String elemento) {
@@ -112,37 +100,37 @@ public class PizzaMarguerita {
 				return 1;
 			}
 			num = n.nextInt(5);
-			if(lista.buscaElemento("calabresa") == -1 && num == 0){
-				lista.inserePrimeiro("calabresa", 0);
-				System.out.println("O jogador "+getJogador()+" perdeu calabresa");
-				setQt(getQt()+1);
-
-				return 1;
-			}
-			if(lista.buscaElemento("brocolis") == -1 && num == 1){
-				lista.inserePrimeiro("brocolis", 0);
-				System.out.println("O jogador "+getJogador()+" perdeu brocolis");
-				setQt(getQt()+1);
-
-				return 1;
-			}
-			if(lista.buscaElemento("tomate") == -1 && num == 2){
+			if(lista.buscaElemento("tomate") == -1 && num == 0){
 				lista.inserePrimeiro("tomate", 0);
 				System.out.println("O jogador "+getJogador()+" perdeu tomate");
 				setQt(getQt()+1);
 
 				return 1;
 			}
-			if(lista.buscaElemento("queijo") == -1 && num == 3){
-				lista.inserePrimeiro("queijo", 0);			
-				System.out.println("O jogador "+getJogador()+" perdeu queijo");
+			if(lista.buscaElemento("presunto") == -1 && num == 1){
+				lista.inserePrimeiro("presunto", 0);
+				System.out.println("O jogador "+getJogador()+" perdeu presunto");
 				setQt(getQt()+1);
 
 				return 1;
 			}
-			if(lista.buscaElemento("milho") == -1 && num == 4){
-				lista.inserePrimeiro("milho", 0);
-				System.out.println("O jogador "+getJogador()+" perdeu milho");
+			if(lista.buscaElemento("azeitona") == -1 && num == 2){
+				lista.inserePrimeiro("azeitona", 0);
+				System.out.println("O jogador "+getJogador()+" perdeu azeitona");
+				setQt(getQt()+1);
+
+				return 1;
+			}
+			if(lista.buscaElemento("calabresa") == -1 && num == 3){
+				lista.inserePrimeiro("calabresa", 0);			
+				System.out.println("O jogador "+getJogador()+" perdeu calabresa");
+				setQt(getQt()+1);
+
+				return 1;
+			}
+			if(lista.buscaElemento("cebola") == -1 && num == 4){
+				lista.inserePrimeiro("cebola", 0);
+				System.out.println("O jogador "+getJogador()+" perdeu cebola");
 				setQt(getQt()+1);
 
 				return 1;

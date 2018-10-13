@@ -3,6 +3,7 @@ package estrutura_de_dados;
 import listas.ListaDupla;
 import listas.ListaSimples;
 import listas.ListaSimplesCartas;
+import pizza.*;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -98,17 +99,17 @@ public class TabuleiroPrincipal {
 					SorteOuAzar();						
 				}
 				
-				if(calabresa.rodadaSemJogar && i == calabresa.getJogador()){
+				if(calabresa.isRodadaSemJogar() && i == calabresa.getJogador()){
 					System.out.println("Jogador "+i+", essa rodada você não pode jogar!");
 					calabresa.setRodadaSemJogar(false);
 					i++;
 				}
-				else if(marguerita.rodadaSemJogar && i == marguerita.getJogador()){
+				else if(marguerita.isRodadaSemJogar() && i == marguerita.getJogador()){
 					System.out.println("Jogador "+i+", essa rodada você não pode jogar!");
 					marguerita.setRodadaSemJogar(false);
 					i++;
 				}
-				else if(portuguesa.rodadaSemJogar && i == portuguesa.getJogador()){
+				else if(portuguesa.isRodadaSemJogar() && i == portuguesa.getJogador()){
 					System.out.println("Jogador "+i+", essa rodada você não pode jogar!");
 					portuguesa.setRodadaSemJogar(false);
 					i++;
@@ -118,12 +119,12 @@ public class TabuleiroPrincipal {
 					romana.setRodadaSemJogar(false);
 					i++;
 				}
-				else if(toscana.rodadaSemJogar && i == toscana.getJogador()){
+				else if(toscana.isRodadaSemJogar() && i == toscana.getJogador()){
 					System.out.println("Jogador "+i+", essa rodada você não pode jogar!");
 					toscana.setRodadaSemJogar(false);
 					i++;
 				}
-				else if(vegetariana.rodadaSemJogar && i == vegetariana.getJogador()){
+				else if(vegetariana.isRodadaSemJogar() && i == vegetariana.getJogador()){
 					System.out.println("Jogador "+i+", essa rodada você não pode jogar!");
 					vegetariana.setRodadaSemJogar(false);
 					i++;

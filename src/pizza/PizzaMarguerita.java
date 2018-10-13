@@ -1,5 +1,6 @@
-package estrutura_de_dados;
+package pizza;
 
+import library.Pizza;
 import listas.ListaDupla;
 
 import java.util.ArrayList;
@@ -7,7 +8,7 @@ import java.util.Random;
 
 import javax.swing.JOptionPane;
 
-public class PizzaVegetariana {
+public class PizzaMarguerita extends Pizza {
 
 	ListaDupla lista = new ListaDupla();
 
@@ -16,16 +17,6 @@ public class PizzaVegetariana {
 	int qt;
 
 	ArrayList<String>faltam = new ArrayList<>();
-
-	boolean rodadaSemJogar;//Sorte ou Azar
-
-	public boolean isRodadaSemJogar() {
-		return rodadaSemJogar;
-	}
-
-	public void setRodadaSemJogar(boolean rodadaSemJogar) {
-		this.rodadaSemJogar = rodadaSemJogar;
-	}
 
 	public int getQt() {
 		return qt;
@@ -42,13 +33,14 @@ public class PizzaVegetariana {
 	public void setJogador(int jogador) {
 		Jogador = jogador;
 	}
+
 	public ArrayList<String> faltamEssesIngredientes(){
 		ArrayList<String> ingredientes = new ArrayList<>();
-		ingredientes.add("Ovos");
-		ingredientes.add("Cebola");
-		ingredientes.add("Ervilha");
+		ingredientes.add("Milho");
+		ingredientes.add("Queijo");
 		ingredientes.add("Tomate");
 		ingredientes.add("Brocolis");
+		ingredientes.add("Calabresa");
 
 		faltam.clear();
 		
@@ -66,28 +58,31 @@ public class PizzaVegetariana {
 		return faltam;
 	}
 	
-	public PizzaVegetariana(int jogador){
+	public PizzaMarguerita(	int jogador){
+		lista.inserePrimeiro("calabresa", 0);
 		lista.inserePrimeiro("brocolis", 0);
 		lista.inserePrimeiro("tomate", 0);
-		lista.inserePrimeiro("ervilha", 0);
-		lista.inserePrimeiro("cebola", 0);
-		lista.inserePrimeiro("ovos", 0);
+		lista.inserePrimeiro("queijo", 0);
+		lista.inserePrimeiro("milho", 0);
 		setJogador(jogador);
 		setQt(5);
 		setRodadaSemJogar(false);
 
 	}
 	
+
 	public void limpaPizza(){
 		for(int i = 0; i < getQt(); i++)
 			lista.removePrimeiro();
 		
+		lista.inserePrimeiro("calabresa", 0);
 		lista.inserePrimeiro("brocolis", 0);
 		lista.inserePrimeiro("tomate", 0);
-		lista.inserePrimeiro("ervilha", 0);
-		lista.inserePrimeiro("cebola", 0);
-		lista.inserePrimeiro("ovos", 0);
+		lista.inserePrimeiro("queijo", 0);
+		lista.inserePrimeiro("milho", 0);
+		
 		setQt(5);
+
 	}
 	
 	public void perdeIngredienteX(String elemento) {
@@ -108,37 +103,37 @@ public class PizzaVegetariana {
 				return 1;
 			}
 			num = n.nextInt(5);
-			if(lista.buscaElemento("brocolis") == -1 && num == 0){
+			if(lista.buscaElemento("calabresa") == -1 && num == 0){
+				lista.inserePrimeiro("calabresa", 0);
+				System.out.println("O jogador "+getJogador()+" perdeu calabresa");
+				setQt(getQt()+1);
+
+				return 1;
+			}
+			if(lista.buscaElemento("brocolis") == -1 && num == 1){
 				lista.inserePrimeiro("brocolis", 0);
 				System.out.println("O jogador "+getJogador()+" perdeu brocolis");
 				setQt(getQt()+1);
 
 				return 1;
 			}
-			if(lista.buscaElemento("tomate") == -1 && num == 1){
+			if(lista.buscaElemento("tomate") == -1 && num == 2){
 				lista.inserePrimeiro("tomate", 0);
 				System.out.println("O jogador "+getJogador()+" perdeu tomate");
 				setQt(getQt()+1);
 
 				return 1;
 			}
-			if(lista.buscaElemento("ervilha") == -1 && num == 2){
-				lista.inserePrimeiro("ervilha", 0);
-				System.out.println("O jogador "+getJogador()+" perdeu ervilha");
+			if(lista.buscaElemento("queijo") == -1 && num == 3){
+				lista.inserePrimeiro("queijo", 0);			
+				System.out.println("O jogador "+getJogador()+" perdeu queijo");
 				setQt(getQt()+1);
 
 				return 1;
 			}
-			if(lista.buscaElemento("cebola") == -1 && num == 3){
-				lista.inserePrimeiro("cebola", 0);			
-				System.out.println("O jogador "+getJogador()+" perdeu cebola");
-				setQt(getQt()+1);
-
-				return 1;
-			}
-			if(lista.buscaElemento("ovos") == -1 && num == 4){
-				lista.inserePrimeiro("ovos", 0);
-				System.out.println("O jogador "+getJogador()+" perdeu ovos");
+			if(lista.buscaElemento("milho") == -1 && num == 4){
+				lista.inserePrimeiro("milho", 0);
+				System.out.println("O jogador "+getJogador()+" perdeu milho");
 				setQt(getQt()+1);
 
 				return 1;
@@ -153,5 +148,5 @@ public class PizzaVegetariana {
 			System.exit(0);
 		}
 	}
-	
+
 }
