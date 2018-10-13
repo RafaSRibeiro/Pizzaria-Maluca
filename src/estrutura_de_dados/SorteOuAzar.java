@@ -3,6 +3,7 @@ package estrutura_de_dados;
 public class SorteOuAzar {
 
 	String texto;
+
 	int numero;	
 	
 	public SorteOuAzar(String texto, int numero) {
@@ -11,7 +12,7 @@ public class SorteOuAzar {
 	}
 
 	@Override
-	public String toString() {//testes
+	public String toString() {
 		return texto + "\n" + numero;
 	}
 

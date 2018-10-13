@@ -1,12 +1,16 @@
 package estrutura_de_dados;
 
+import listas.ListaDupla;
+import listas.ListaSimples;
+import listas.ListaSimplesCartas;
+
 import java.util.ArrayList;
 import java.util.Random;
 
 import javax.swing.JOptionPane;
 
 public class TabuleiroPrincipal {
-	static ListaSimples listaJogadores = new ListaSimples();	
+	static ListaSimples listaJogadores = new ListaSimples();
 	static ListaDupla tabuleiro = new ListaDupla();
 	static int j1 = 0, j2 = 0, j3 = 0, j4 = 0, j5 = 0; //posicao de cada jogador
 	static PizzaCalabresa calabresa = new PizzaCalabresa(0);

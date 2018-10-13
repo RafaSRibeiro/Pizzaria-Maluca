@@ -1,5 +1,7 @@
 package estrutura_de_dados;
 
+import listas.ListaDupla;
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -48,7 +50,7 @@ public class PizzaRomana {
 		
 		for(int j = 0; j<ingredientes.size() ; j++){
 			String ing = ingredientes.get(j);
-			for(int i = 1; i<this.lista.comprimento()+1; i++){
+			for(int i = 1; i<this.lista.tamanho()+1; i++){
 				if(ing.equalsIgnoreCase(this.lista.elementoNaPosicao(i).getNomeEtapa())){
 					this.faltam.add(ingredientes.get(j));
 					ingredientes.remove(j);
@@ -143,7 +145,7 @@ public class PizzaRomana {
 	}
 	
 	public void verificaSeGanhou(){
-		if(lista.estaVazio()){
+		if(lista.isVazio()){
 			System.out.println("O Jogador "+getJogador() +" ganhou!");
 			JOptionPane.showMessageDialog(null, "O Jogador "+getJogador() +" ganhou!");
 			System.exit(0);

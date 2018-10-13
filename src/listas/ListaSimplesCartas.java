@@ -1,7 +1,10 @@
-package estrutura_de_dados;
+package listas;
+
+import estrutura_de_dados.NoCartas;
+import estrutura_de_dados.SorteOuAzar;
 
 public class ListaSimplesCartas {
-	    private  NoCartas primeiro, ultimo, atual;
+	    private NoCartas primeiro, ultimo, atual;
 	    
 	    public ListaSimplesCartas() {
 	         primeiro = ultimo = atual = null;

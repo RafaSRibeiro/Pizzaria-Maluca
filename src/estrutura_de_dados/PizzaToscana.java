@@ -1,15 +1,22 @@
 package estrutura_de_dados;
 
+import listas.ListaDupla;
+
 import java.util.ArrayList;
 import java.util.Random;
 
 import javax.swing.JOptionPane;
 
 public class PizzaToscana {
+
 	ListaDupla lista = new ListaDupla();
+
 	int Jogador;
+
 	int qt;
+
 	ArrayList<String>faltam = new ArrayList<>();
+
 	boolean rodadaSemJogar;//Sorte ou Azar
 
 	public boolean isRodadaSemJogar() {
@@ -48,7 +55,7 @@ public class PizzaToscana {
 		
 		for(int j = 0; j<ingredientes.size() ; j++){
 			String ing = ingredientes.get(j);
-			for(int i = 1; i<this.lista.comprimento()+1; i++){
+			for(int i = 1; i<this.lista.tamanho()+1; i++){
 				if(ing.equalsIgnoreCase(this.lista.elementoNaPosicao(i).getNomeEtapa())){
 					this.faltam.add(ingredientes.get(j));
 					ingredientes.remove(j);
@@ -141,7 +148,7 @@ public class PizzaToscana {
 	}
 	
 	public void verificaSeGanhou(){
-		if(lista.estaVazio()){
+		if(lista.isVazio()){
 			System.out.println("O Jogador "+getJogador() +" ganhou!");
 			JOptionPane.showMessageDialog(null, "O Jogador "+getJogador() +" ganhou!");
 			System.exit(0);
