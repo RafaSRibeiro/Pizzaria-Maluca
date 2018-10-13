@@ -1,35 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4c74758e-844d-46f7-b00e-71d4f58d67fe" name="Default Changelist" comment="">
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f9608237-889a-4c02-8647-001b02d3babf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/estrutura_de_dados/NoCartas.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/estrutura_de_dados/NoCartas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/estrutura_de_dados/NoPilha.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/estrutura_de_dados/NoPilha.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/estrutura_de_dados/NoProjeto.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/estrutura_de_dados/NoProjeto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/estrutura_de_dados/NoProjetoDupla.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/estrutura_de_dados/NoProjetoDupla.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/estrutura_de_dados/Pilha.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/estrutura_de_dados/Pilha.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/estrutura_de_dados/PizzaCalabresa.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/estrutura_de_dados/PizzaCalabresa.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/estrutura_de_dados/PizzaMarguerita.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/estrutura_de_dados/PizzaMarguerita.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/estrutura_de_dados/PizzaPortuguesa.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/estrutura_de_dados/PizzaPortuguesa.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/estrutura_de_dados/PizzaRomana.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/estrutura_de_dados/PizzaRomana.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/estrutura_de_dados/PizzaToscana.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/estrutura_de_dados/PizzaToscana.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/estrutura_de_dados/PizzaVegetariana.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/estrutura_de_dados/PizzaVegetariana.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/estrutura_de_dados/SorteOuAzar.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/estrutura_de_dados/SorteOuAzar.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/estrutura_de_dados/TabuleiroPrincipal.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/estrutura_de_dados/TabuleiroPrincipal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/listas/ListaDupla.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/listas/ListaDupla.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/listas/ListaSimples.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/listas/ListaSimples.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/listas/ListaSimplesCartas.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/listas/ListaSimplesCartas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/estrutura_de_dados/TabuleiroPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/estrutura_de_dados/TabuleiroPrincipal.java" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
->>>>>>> 6384679cb87fadf09fcc26bef1770e83da621d84
+      <change beforePath="$PROJECT_DIR$/bin/estrutura_de_dados/NoCartas.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/estrutura_de_dados/NoPilha.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/estrutura_de_dados/NoProjeto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/estrutura_de_dados/NoProjetoDupla.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/estrutura_de_dados/Pilha.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/estrutura_de_dados/PizzaCalabresa.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/estrutura_de_dados/PizzaMarguerita.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/estrutura_de_dados/PizzaPortuguesa.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/estrutura_de_dados/PizzaRomana.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/estrutura_de_dados/PizzaToscana.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/estrutura_de_dados/PizzaVegetariana.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/estrutura_de_dados/SorteOuAzar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/estrutura_de_dados/TabuleiroPrincipal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/listas/ListaDupla.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/listas/ListaSimples.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/listas/ListaSimplesCartas.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,238 +32,14 @@
     <session id="493031723">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.16" value="1" />
           <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="gitignore" value="2" />
-          <entry key="java" value="31" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="31" />
-          <entry key="PLAIN_TEXT" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="gitignore" value="11" />
-          <entry key="java" value="304" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="304" />
-          <entry key="PLAIN_TEXT" value="11" />
         </counts>
       </usages-collector>
     </session>
   </component>
-  <component name="FileEditorManager">
-<<<<<<< HEAD
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TabuleiroPrincipal.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/estrutura_de_dados/TabuleiroPrincipal.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="166" column="91" lean-forward="true" selection-start-line="166" selection-start-column="91" selection-end-line="166" selection-end-column="91" />
-              <folding>
-                <element signature="imports" expanded="true" />
-=======
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pizza/PizzaCalabresa.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/library/Pizza.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-              <folding>
-                <element signature="e#126#127#0" expanded="true" />
-                <element signature="e#163#164#0" expanded="true" />
-                <element signature="e#224#225#0" expanded="true" />
-                <element signature="e#276#277#0" expanded="true" />
-                <element signature="e#374#375#0" expanded="true" />
-                <element signature="e#404#405#0" expanded="true" />
-                <element signature="e#447#448#0" expanded="true" />
-                <element signature="e#485#486#0" expanded="true" />
-                <element signature="e#519#520#0" expanded="true" />
-                <element signature="e#552#553#0" expanded="true" />
-                <element signature="e#601#602#0" expanded="true" />
-                <element signature="e#645#646#0" expanded="true" />
->>>>>>> 6384679cb87fadf09fcc26bef1770e83da621d84
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-      <file leaf-file-name="ListaSimples.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/listas/ListaSimples.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-820">
-              <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-=======
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pizza/PizzaMarguerita.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
->>>>>>> 6384679cb87fadf09fcc26bef1770e83da621d84
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-      <file leaf-file-name="NoProjeto.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/estrutura_de_dados/NoProjeto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-=======
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pizza/PizzaPortuguesa.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="46" column="35" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
->>>>>>> 6384679cb87fadf09fcc26bef1770e83da621d84
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-      <file leaf-file-name="NoProjetoDupla.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/estrutura_de_dados/NoProjetoDupla.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-              <folding>
-                <element signature="e#363#364#0" expanded="true" />
-                <element signature="e#395#396#0" expanded="true" />
-=======
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pizza/PizzaRomana.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-              <folding>
-                <element signature="e#481#482#0" expanded="true" />
-                <element signature="e#505#506#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pizza/PizzaToscana.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-              <folding>
-                <element signature="e#482#483#0" expanded="true" />
-                <element signature="e#506#507#0" expanded="true" />
->>>>>>> 6384679cb87fadf09fcc26bef1770e83da621d84
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-      <file leaf-file-name="SorteOuAzar.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/estrutura_de_dados/SorteOuAzar.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
-=======
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pizza/PizzaVegetariana.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#486#487#0" expanded="true" />
-                <element signature="e#510#511#0" expanded="true" />
-              </folding>
->>>>>>> 6384679cb87fadf09fcc26bef1770e83da621d84
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
-<<<<<<< HEAD
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>rodada</find>
-=======
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>rodadaSemJogar</find>
-      <find>vegetariana.</find>
->>>>>>> 6384679cb87fadf09fcc26bef1770e83da621d84
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/estrutura_de_dados/UsaListaSimples.java" />
-<<<<<<< HEAD
-        <option value="$PROJECT_DIR$/.gitignore" />
-=======
->>>>>>> 6384679cb87fadf09fcc26bef1770e83da621d84
-        <option value="$PROJECT_DIR$/src/estrutura_de_dados/ListaDupla.java" />
-        <option value="$PROJECT_DIR$/src/estrutura_de_dados/NoCartas.java" />
-        <option value="$PROJECT_DIR$/src/estrutura_de_dados/NoProjetoDupla.java" />
-        <option value="$PROJECT_DIR$/src/estrutura_de_dados/SorteOuAzar.java" />
-        <option value="$PROJECT_DIR$/src/estrutura_de_dados/PizzaVegetariana.java" />
-        <option value="$PROJECT_DIR$/src/estrutura_de_dados/PizzaToscana.java" />
-        <option value="$PROJECT_DIR$/src/pizza/PizzaToscana.java" />
-        <option value="$PROJECT_DIR$/src/estrutura_de_dados/PizzaCalabresa.java" />
-<<<<<<< HEAD
-        <option value="$PROJECT_DIR$/src/estrutura_de_dados/TabuleiroPrincipal.java" />
-=======
-        <option value="$PROJECT_DIR$/src/estrutura_de_dados/PizzaMarguerita.java" />
-        <option value="$PROJECT_DIR$/src/pizza/PizzaMarguerita.java" />
-        <option value="$PROJECT_DIR$/src/pizza/PizzaCalabresa.java" />
-        <option value="$PROJECT_DIR$/src/estrutura_de_dados/PizzaPortuguesa.java" />
-        <option value="$PROJECT_DIR$/src/estrutura_de_dados/TabuleiroPrincipal.java" />
-        <option value="$PROJECT_DIR$/src/estrutura_de_dados/PizzaRomana.java" />
-        <option value="$PROJECT_DIR$/src/pizza/PizzaRomana.java" />
-        <option value="$PROJECT_DIR$/src/library/Pizza.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
->>>>>>> 6384679cb87fadf09fcc26bef1770e83da621d84
-      </list>
-    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -278,20 +47,18 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths />
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="784" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="260" />
+    <option name="y" value="25" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -300,47 +67,20 @@
               <item name="CCP" type="b2602c69:ProjectViewProjectNode" />
               <item name="Pizzaria-Maluca" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="CCP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pizzaria-Maluca" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-<<<<<<< HEAD
-=======
-            <path>
-              <item name="CCP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pizzaria-Maluca" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="estrutura_de_dados" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CCP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pizzaria-Maluca" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="library" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CCP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pizzaria-Maluca" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pizza" type="462c0819:PsiDirectoryNode" />
-            </path>
->>>>>>> 6384679cb87fadf09fcc26bef1770e83da621d84
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539440133674" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -357,61 +97,10 @@
   <component name="RunManager">
     <configuration name="Unnamed" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="estrutura_de_dados.TabuleiroPrincipal" />
-<<<<<<< HEAD
       <module name="CCP" />
-=======
-      <module name="PizzariaMaluca" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <module name="PizzariaMaluca" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <module name="PizzariaMaluca" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
->>>>>>> 6384679cb87fadf09fcc26bef1770e83da621d84
     </configuration>
   </component>
   <component name="SvnConfiguration">
@@ -419,530 +108,54 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4c74758e-844d-46f7-b00e-71d4f58d67fe" name="Default Changelist" comment="" />
-      <created>1539361273282</created>
+      <changelist id="f9608237-889a-4c02-8647-001b02d3babf" name="Default Changelist" comment="" />
+      <created>1539443207884</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1539361273282</updated>
-      <workItem from="1539361283020" duration="5103000" />
+      <updated>1539443207884</updated>
+      <workItem from="1539443221794" duration="30000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-<<<<<<< HEAD
-    <option name="totallyTimeSpent" value="4950000" />
-=======
-    <option name="totallyTimeSpent" value="5103000" />
->>>>>>> 6384679cb87fadf09fcc26bef1770e83da621d84
+    <option name="totallyTimeSpent" value="30000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <layout>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32921174" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32921174" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22411129" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32921174" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2193646" />
-      <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-<<<<<<< HEAD
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-=======
-      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32939914" />
+      <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32939914" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.21888413" />
->>>>>>> 6384679cb87fadf09fcc26bef1770e83da621d84
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14072494" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.83476394" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32939914" />
-      <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Capture Tool" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Messages" order="8" />
-      <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info id="Favorites" order="3" side_tool="true" />
     </layout>
-    <layout-to-restore>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.83476394" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.3298969" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22006473" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32939914" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="8" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/estrutura_de_dados/TabuleiroPrincipal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3264">
-          <caret line="192" column="13" lean-forward="true" selection-start-line="192" selection-start-column="13" selection-end-line="192" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/estrutura_de_dados/TabuleiroPrincipal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="44" lean-forward="true" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/estrutura_de_dados/SorteOuAzar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/estrutura_de_dados/NoProjeto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/estrutura_de_dados/ListaSimples.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/estrutura_de_dados/ListaDupla.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-=======
->>>>>>> 6384679cb87fadf09fcc26bef1770e83da621d84
-    <entry file="file://$PROJECT_DIR$/src/estrutura_de_dados/UsaListaSimples.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/arvores/UsaAB.java" />
-    <entry file="file://$PROJECT_DIR$/src/arvores/AB.java" />
-    <entry file="file://$PROJECT_DIR$/src/estrutura_de_dados/NoProjeto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/estrutura_de_dados/ListaSimples.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/estrutura_de_dados/UsaListaSimples.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/estrutura_de_dados/ListaSimplesCartas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="61" column="49" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/estrutura_de_dados/SorteOuAzar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/estrutura_de_dados/ListaDupla.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="49" column="26" selection-start-line="49" selection-start-column="26" selection-end-line="49" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/estrutura_de_dados/TabuleiroPrincipal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="13" column="48" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/arvores/UsaAB.java" />
-    <entry file="file://$PROJECT_DIR$/src/arvores/AB.java" />
-    <entry file="file://$PROJECT_DIR$/src/estrutura_de_dados/UsaListaSimples.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/estrutura_de_dados/SorteOuAzar.java">
-=======
-    <entry file="file://$PROJECT_DIR$/src/estrutura_de_dados/NoPilha.java">
->>>>>>> 6384679cb87fadf09fcc26bef1770e83da621d84
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/estrutura_de_dados/NoProjeto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/estrutura_de_dados/ListaSimples.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/estrutura_de_dados/ListaDupla.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/estrutura_de_dados/TabuleiroPrincipal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="27" column="44" lean-forward="true" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/arvores/UsaAB.java" />
-    <entry file="file://$PROJECT_DIR$/src/arvores/AB.java" />
-    <entry file="file://$PROJECT_DIR$/src/estrutura_de_dados/UsaListaSimples.java" />
-    <entry file="file://$PROJECT_DIR$/src/estrutura_de_dados/NoPilha.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/estrutura_de_dados/NoCartas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#230#231#0" expanded="true" />
-            <element signature="e#249#250#0" expanded="true" />
-            <element signature="e#319#320#0" expanded="true" />
-            <element signature="e#353#354#0" expanded="true" />
-            <element signature="e#399#400#0" expanded="true" />
-            <element signature="e#454#455#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/listas/ListaSimplesCartas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="31" column="31" lean-forward="true" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/estrutura_de_dados/SorteOuAzar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/estrutura_de_dados/TabuleiroPrincipal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="111" column="53" selection-start-line="111" selection-start-column="53" selection-end-line="111" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pizza/PizzaToscana.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="e#482#483#0" expanded="true" />
-            <element signature="e#506#507#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pizza/PizzaRomana.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="e#481#482#0" expanded="true" />
-            <element signature="e#505#506#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pizza/PizzaPortuguesa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="46" column="35" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pizza/PizzaMarguerita.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pizza/PizzaCalabresa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pizza/PizzaVegetariana.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#486#487#0" expanded="true" />
-            <element signature="e#510#511#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/library/Pizza.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#126#127#0" expanded="true" />
-            <element signature="e#163#164#0" expanded="true" />
-            <element signature="e#224#225#0" expanded="true" />
-            <element signature="e#276#277#0" expanded="true" />
-            <element signature="e#374#375#0" expanded="true" />
-            <element signature="e#404#405#0" expanded="true" />
-            <element signature="e#447#448#0" expanded="true" />
-            <element signature="e#485#486#0" expanded="true" />
-            <element signature="e#519#520#0" expanded="true" />
-            <element signature="e#552#553#0" expanded="true" />
-            <element signature="e#601#602#0" expanded="true" />
-            <element signature="e#645#646#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/listas/ListaDupla.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="56" column="26" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/estrutura_de_dados/NoProjetoDupla.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-          <folding>
-            <element signature="e#363#364#0" expanded="true" />
-            <element signature="e#395#396#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.classpath">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="12" lean-forward="true" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/estrutura_de_dados/NoProjeto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.project">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="6" selection-start-column="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CCP.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/listas/ListaSimples.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-820">
-          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/estrutura_de_dados/TabuleiroPrincipal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="166" column="91" lean-forward="true" selection-start-line="166" selection-start-column="91" selection-end-line="166" selection-end-column="91" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-=======
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
->>>>>>> 6384679cb87fadf09fcc26bef1770e83da621d84
-        </state>
-      </provider>
-    </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>11</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>
