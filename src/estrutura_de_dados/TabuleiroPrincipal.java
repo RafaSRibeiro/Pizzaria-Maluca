@@ -99,39 +99,7 @@ public class TabuleiroPrincipal {
 					System.out.println("Embaralhando as cartas de Sorte ou Azar\n");
 					SorteOuAzar();						
 				}
-				
-				if(calabresa.isRodadaSemJogar() && i == calabresa.getJogador()){
-					System.out.println("Jogador "+i+", essa rodada você não pode jogar!");
-					calabresa.setRodadaSemJogar(false);
-					i++;
-				}
-				else if(marguerita.isRodadaSemJogar() && i == marguerita.getJogador()){
-					System.out.println("Jogador "+i+", essa rodada você não pode jogar!");
-					marguerita.setRodadaSemJogar(false);
-					i++;
-				}
-				else if(portuguesa.isRodadaSemJogar() && i == portuguesa.getJogador()){
-					System.out.println("Jogador "+i+", essa rodada você não pode jogar!");
-					portuguesa.setRodadaSemJogar(false);
-					i++;
-				}
-				else if(romana.isRodadaSemJogar() && i == romana.getJogador()){
-					System.out.println("Jogador "+i+", essa rodada você não pode jogar!");
-					romana.setRodadaSemJogar(false);
-					i++;
-				}
-				else if(toscana.isRodadaSemJogar() && i == toscana.getJogador()){
-					System.out.println("Jogador "+i+", essa rodada você não pode jogar!");
-					toscana.setRodadaSemJogar(false);
-					i++;
-				}
-				else if(vegetariana.isRodadaSemJogar() && i == vegetariana.getJogador()){
-					System.out.println("Jogador "+i+", essa rodada você não pode jogar!");
-					vegetariana.setRodadaSemJogar(false);
-					i++;
-				}
-				
-				rodada(i);	
+				rodada(i);
 				
 				if(jogaDadoNovamente){//Se o jogador pega a carta de jogar novamente
 					i--;
@@ -297,12 +265,18 @@ public class TabuleiroPrincipal {
                 pizza.perdeIngredienteX(posicao);
                 System.out.println("\nO Jogador " + jogador + " pegou " + posicao + "!");
             } else {
-                System.out.println("O Jogador "+ jogador + " não precisa de " + posicao + "!" );
+                System.out.println("\nO Jogador "+ jogador + " não precisa de " + posicao + "!" );
             }
 		}
 	}
 
 	private static void rodada(int jogador){
+		if (getPizzaByJogador(jogador).isRodadaSemJogar()) {
+			System.out.println("Jogador " + jogador +", essa rodada você não pode jogar!");
+			getPizzaByJogador(jogador).setRodadaSemJogar(false);
+			return;
+		}
+
 		peao = peao + dado(jogador);
 
 		if (peao > 35)
