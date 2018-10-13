@@ -378,7 +378,11 @@ public class TabuleiroPrincipal {
 				+ "35 - SORTE OU AZAR\n");
 		int numJogadores = 0;
 		while(numJogadores<2 || numJogadores>5){
-			numJogadores = Integer.parseInt(JOptionPane.showInputDialog("Numero de jogadores? (2 à 5)")); 		
+			try {
+				numJogadores = Integer.parseInt(JOptionPane.showInputDialog("Numero de jogadores? (2 à 5)"));
+			} catch (NumberFormatException e) {
+				menuJogo();
+			}
 		}
 		return numJogadores;
 		}
