@@ -1,6 +1,6 @@
 package library;
 
-public class Pizza {
+public abstract class Pizza {
 
     protected boolean rodadaSemJogar;
 
