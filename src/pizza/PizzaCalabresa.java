@@ -12,27 +12,7 @@ public class PizzaCalabresa extends Pizza {
 
     ListaDupla lista = new ListaDupla();
 
-    int Jogador;
-
-    int qt;
-
     ArrayList<String> faltam = new ArrayList<>();
-
-    public int getQt() {
-        return qt;
-    }
-
-    public void setQt(int qt) {
-        this.qt = qt;
-    }
-
-    public int getJogador() {
-        return Jogador;
-    }
-
-    public void setJogador(int jogador) {
-        Jogador = jogador;
-    }
 
     public ArrayList<String> faltamEssesIngredientes() {
         ArrayList<String> ingredientes = new ArrayList<>();
@@ -66,7 +46,7 @@ public class PizzaCalabresa extends Pizza {
         lista.inserePrimeiro("ovos", 0);
         lista.inserePrimeiro("ervilha", 0);
         setJogador(jogador);
-        setQt(5);
+        setQuantidade(5);
         setRodadaSemJogar(false);
     }
 
@@ -82,13 +62,13 @@ public class PizzaCalabresa extends Pizza {
         lista.inserePrimeiro("ovos", 0);
         lista.inserePrimeiro("ervilha", 0);
 
-        setQt(5);
+        setQuantidade(5);
     }
 
     public void perdeIngredienteX(String elemento) {
         if (lista.buscaElemento(elemento) > -1) {
             lista.removeElemento(elemento);
-            setQt(getQt() - 1);
+            setQuantidade(getQuantidade() - 1);
             System.out.println("O Jogador " + getJogador() + " pegou " + elemento + "!");
         }
         verificaSeGanhou();
@@ -98,7 +78,7 @@ public class PizzaCalabresa extends Pizza {
         Random n = new Random();
         int num;
         while (true) {
-            if (getQt() == 5) {
+            if (getQuantidade() == 5) {
                 System.out.println("Sua Pizza ja esta vazia!");
                 return 1;
             }
@@ -106,35 +86,35 @@ public class PizzaCalabresa extends Pizza {
             if (lista.buscaElemento("calabresa") == -1 && num == 0) {
                 lista.inserePrimeiro("calabresa", 0);
                 System.out.println("O jogador " + getJogador() + " perdeu calabresa");
-                setQt(getQt() + 1);
+                setQuantidade(getQuantidade() + 1);
 
                 return 1;
             }
             if (lista.buscaElemento("azeitona") == -1 && num == 1) {
                 lista.inserePrimeiro("azeitona", 0);
                 System.out.println("O jogador " + getJogador() + " perdeu azeitona");
-                setQt(getQt() + 1);
+                setQuantidade(getQuantidade() + 1);
 
                 return 1;
             }
             if (lista.buscaElemento("brocolis") == -1 && num == 2) {
                 lista.inserePrimeiro("brocolis", 0);
                 System.out.println("O jogador " + getJogador() + " perdeu brocolis");
-                setQt(getQt() + 1);
+                setQuantidade(getQuantidade() + 1);
 
                 return 1;
             }
             if (lista.buscaElemento("ovos") == -1 && num == 3) {
                 lista.inserePrimeiro("ovos", 0);
                 System.out.println("O jogador " + getJogador() + " perdeu ovos");
-                setQt(getQt() + 1);
+                setQuantidade(getQuantidade() + 1);
 
                 return 1;
             }
             if (lista.buscaElemento("ervilha") == -1 && num == 4) {
                 lista.inserePrimeiro("ervilha", 0);
                 System.out.println("O jogador " + getJogador() + " perdeu ervilha");
-                setQt(getQt() + 1);
+                setQuantidade(getQuantidade() + 1);
 
                 return 1;
             }
@@ -142,7 +122,7 @@ public class PizzaCalabresa extends Pizza {
     }
 
     public void verificaSeGanhou() {
-        if (getQt() == 0) {
+        if (getQuantidade() == 0) {
             System.out.println("O Jogador " + getJogador() + " ganhou!");
             JOptionPane.showMessageDialog(null, "O Jogador " + getJogador() + " ganhou!");
             System.exit(0);
