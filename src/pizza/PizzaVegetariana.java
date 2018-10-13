@@ -20,7 +20,7 @@ public class PizzaVegetariana extends Pizza {
 		ingredientes.add(brocolis);
 
 		faltam.clear();
-		
+
 		for(int j = 0; j<ingredientes.size() ; j++){
 			String ing = ingredientes.get(j);
 			for(int i = 1; i<this.getIngredientes().tamanho()+1; i++){
@@ -50,15 +50,15 @@ public class PizzaVegetariana extends Pizza {
 		setRodadaSemJogar(false);
 
 	}
-	
+
 	public void limpaPizza(){
 		for(int i = 0; i < getQuantidade(); i++)
 			getIngredientes().removePrimeiro();
-		
+
 		inicializaIngredientes();
 		setQuantidade(5);
 	}
-	
+
 	public void perdeIngredienteX(String elemento) {
 		if(getIngredientes().buscaElemento(elemento) > -1){
 			getIngredientes().removeElemento(elemento);
@@ -66,7 +66,7 @@ public class PizzaVegetariana extends Pizza {
 		}
 		verificaSeGanhou();
 }
-	
+
 	public int ganhaIngredienteAleatorio(){
 		Random n = new Random();
 		int num;
@@ -98,7 +98,7 @@ public class PizzaVegetariana extends Pizza {
 				return 1;
 			}
 			if(getIngredientes().buscaElemento("cebola") == -1 && num == 3){
-				getIngredientes().inserePrimeiro("cebola", 0);			
+				getIngredientes().inserePrimeiro("cebola", 0);
 				System.out.println("O jogador "+getJogador()+" perdeu cebola");
 				setQuantidade(getQuantidade()+1);
 
@@ -113,7 +113,7 @@ public class PizzaVegetariana extends Pizza {
 			}
 		}
 	}
-	
+
 	public void verificaSeGanhou(){
 		if(getIngredientes().isVazio()){
 			System.out.println("O Jogador "+getJogador() +" ganhou!");
@@ -121,5 +121,5 @@ public class PizzaVegetariana extends Pizza {
 			System.exit(0);
 		}
 	}
-	
+
 }

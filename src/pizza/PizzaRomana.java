@@ -20,7 +20,7 @@ public class PizzaRomana extends Pizza {
 		ingredientes.add(queijo);
 
 		faltam.clear();
-		
+
 		for(int j = 0; j<ingredientes.size() ; j++){
 			String ing = ingredientes.get(j);
 			for(int i = 1; i<this.getIngredientes().tamanho()+1; i++){
@@ -53,11 +53,11 @@ public class PizzaRomana extends Pizza {
 	public void limpaPizza(){
 		for(int i = 0; i < getQuantidade(); i++)
 			getIngredientes().removePrimeiro();
-		
+
 		inicializaIngredientes();
 		setQuantidade(5);
 	}
-	
+
 	public void perdeIngredienteX(String elemento) {
 			if(getIngredientes().buscaElemento(elemento) > -1){
 				getIngredientes().removeElemento(elemento);
@@ -65,12 +65,12 @@ public class PizzaRomana extends Pizza {
 			}
 			verificaSeGanhou();
 	}
-	
+
 	public int ganhaIngredienteAleatorio(){
 		Random n = new Random();
 		int num;
 		while(true){
-			
+
 			if(getQuantidade() == 5 ){
 				System.out.println("Sua Pizza ja esta vazia!");
 				return 1;
@@ -80,40 +80,40 @@ public class PizzaRomana extends Pizza {
 				getIngredientes().inserePrimeiro("queijo", 0);
 				System.out.println("O jogador "+getJogador()+" perdeu queijo");
 				setQuantidade(getQuantidade()+1);
-				
+
 				return 1;
 			}
 			if(getIngredientes().buscaElemento("cebola") == -1 && num == 1){
 				getIngredientes().inserePrimeiro("cebola", 0);
 				System.out.println("O jogador "+getJogador()+" perdeu cebola");
 				setQuantidade(getQuantidade()+1);
-				
+
 				return 1;
 			}
 			if(getIngredientes().buscaElemento("milho") == -1 && num == 2){
 				getIngredientes().inserePrimeiro("milho", 0);
 				System.out.println("O jogador "+getJogador()+" perdeu milho");
 				setQuantidade(getQuantidade()+1);
-				
+
 				return 1;
 			}
 			if(getIngredientes().buscaElemento("presunto") == -1 && num == 3){
-				getIngredientes().inserePrimeiro("presunto", 0);			
+				getIngredientes().inserePrimeiro("presunto", 0);
 				System.out.println("O jogador "+getJogador()+" perdeu presunto");
 				setQuantidade(getQuantidade()+1);
-				
+
 				return 1;
 			}
 			if(getIngredientes().buscaElemento("ervilha") == -1 && num == 4){
 				getIngredientes().inserePrimeiro("ervilha", 0);
 				System.out.println("O jogador "+getJogador()+" perdeu ervilha");
 				setQuantidade(getQuantidade()+1);
-				
+
 				return 1;
 			}
 		}
 	}
-	
+
 	public void verificaSeGanhou(){
 		if(getIngredientes().isVazio()){
 			System.out.println("O Jogador "+getJogador() +" ganhou!");
