@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 public class TabuleiroPrincipal {
 	static ListaSimples listaJogadores = new ListaSimples();
 	static ListaDupla tabuleiro = new ListaDupla();
-	static int j1 = 0, j2 = 0, j3 = 0, j4 = 0, j5 = 0; //posicao de cada jogador
+	static int peao = 0; //posicao de cada jogador
 	static PizzaCalabresa calabresa = new PizzaCalabresa(0);
 	static PizzaMarguerita marguerita = new PizzaMarguerita(0);
 	static PizzaPortuguesa portuguesa = new PizzaPortuguesa(0);
@@ -920,50 +920,19 @@ public class TabuleiroPrincipal {
 			}
 		}
 	}
-	
+
 	private static void rodada(int jogador){
-		switch (jogador) {
-		case 1:
-			j1 = j1 + dado(jogador);
-			if(j1 > 35)
-				j1 = j1 - 35;
-			System.out.print("-Jogador 1 esta na posicao: "+j1);
-			verifica(tabuleiro.moveParaPosicao(j1).getNomeEtapa() , jogador); ////verificar
-			break;
-		case 2:
-			j2 = j2 + dado(jogador);
-			if(j2 > 35)
-				j2 = j2 - 35;
-			System.out.print("-Jogador 2 esta na posicao: "+j2);
-			verifica(tabuleiro.moveParaPosicao(j2).getNomeEtapa() , jogador); ////verificar
-			
-			break;
-		case 3:
-			j3 = j3 + dado(jogador);
-			if(j3 > 35)
-				j3 = j3 - 35;
-			System.out.print("-Jogador 3 esta na posicao: "+j3);
-			verifica(tabuleiro.moveParaPosicao(j3).getNomeEtapa() , jogador); ////verificar
-			break;
-		case 4:
-			j4 = j4 + dado(jogador);
-			if(j4 > 35)
-				j4 = j4 - 35;
-			System.out.print("-Jogador 4 esta na posicao: "+j4);
-			verifica(tabuleiro.moveParaPosicao(j4).getNomeEtapa() , jogador); ////verificar
-			break;
-		case 5:
-			j5 = j5 + dado(jogador);
-			if(j5 > 35)
-				j5 = j5 - 35;
-			System.out.print("-Jogador 5 esta na posicao: "+j5);
-			verifica(tabuleiro.moveParaPosicao(j5).getNomeEtapa() , jogador); ////verificar
-			break;
-		}
+		peao = peao + dado(jogador);
+
+		if (peao > 35)
+			peao = peao - 35;
+
+		System.out.print("O peão está na posição: " + peao);
+		verifica(tabuleiro.moveParaPosicao(peao).getNomeEtapa() , jogador);
 	}
 
 	private static int dado(int jogador){
-		JOptionPane.showMessageDialog(null, "Jogador "+ jogador + " jogue o dado!");
+		System.out.println("Jogador " + jogador + " jogou o dado!");
 		Random dado = new Random();
 		int num = dado.nextInt(6) + 1;
 		System.out.println("-Jogador "+ jogador + " tirou " +num+ "!");
