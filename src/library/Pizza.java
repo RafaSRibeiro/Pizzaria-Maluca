@@ -32,13 +32,4 @@ public abstract class Pizza {
         this.quantidade = quantidade;
     }
 
-    public void addQuantidade(int quantidade) {
-        addQuantidade(quantidade);
-    }
-
-    public void addQuantidade() {
-        addQuantidade(1);
-    }
-
-
 }

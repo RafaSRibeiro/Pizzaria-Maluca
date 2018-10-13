@@ -12,28 +12,8 @@ public class PizzaRomana extends Pizza {
 
 	ListaDupla lista = new ListaDupla();
 
-	int Jogador;
-
-	int qt;
-
 	ArrayList<String>faltam = new ArrayList<>();
 
-	public int getQt() {
-		return qt;
-	}
-	
-	public void setQt(int qt) {
-		this.qt = qt;
-	}
-	
-	public int getJogador() {
-		return Jogador;
-	}
-
-	public void setJogador(int jogador) {
-		Jogador = jogador;
-	}
-	
 	public ArrayList<String> faltamEssesIngredientes(){
 		ArrayList<String> ingredientes = new ArrayList<>();
 		ingredientes.add("Ervilha");
@@ -65,14 +45,14 @@ public class PizzaRomana extends Pizza {
 		lista.inserePrimeiro("presunto", 0);
 		lista.inserePrimeiro("ervilha", 0);
 		setJogador(jogador);
-		setQt(5);
+		setQuantidade(5);
 		setRodadaSemJogar(false);
 
 	}
 	
 	
 	public void limpaPizza(){
-		for(int i = 0; i < getQt(); i++)
+		for(int i = 0; i < getQuantidade(); i++)
 			lista.removePrimeiro();
 		
 		lista.inserePrimeiro("queijo", 0);
@@ -80,13 +60,13 @@ public class PizzaRomana extends Pizza {
 		lista.inserePrimeiro("milho", 0);
 		lista.inserePrimeiro("presunto", 0);
 		lista.inserePrimeiro("ervilha", 0);
-		setQt(5);
+		setQuantidade(5);
 	}
 	
 	public void perdeIngredienteX(String elemento) {
 			if(lista.buscaElemento(elemento) > -1){
 				lista.removeElemento(elemento);
-				setQt(getQt()-1);
+				setQuantidade(getQuantidade()-1);
 				System.out.println("O Jogador "+ getJogador() + " pegou "+elemento + "!");
 			}
 			verificaSeGanhou();
@@ -97,7 +77,7 @@ public class PizzaRomana extends Pizza {
 		int num;
 		while(true){
 			
-			if(getQt() == 5 ){
+			if(getQuantidade() == 5 ){
 				System.out.println("Sua Pizza ja esta vazia!");
 				return 1;
 			}
@@ -105,35 +85,35 @@ public class PizzaRomana extends Pizza {
 			if(lista.buscaElemento("queijo") == -1 && num == 0){
 				lista.inserePrimeiro("queijo", 0);
 				System.out.println("O jogador "+getJogador()+" perdeu queijo");
-				setQt(getQt()+1);
+				setQuantidade(getQuantidade()+1);
 				
 				return 1;
 			}
 			if(lista.buscaElemento("cebola") == -1 && num == 1){
 				lista.inserePrimeiro("cebola", 0);
 				System.out.println("O jogador "+getJogador()+" perdeu cebola");
-				setQt(getQt()+1);
+				setQuantidade(getQuantidade()+1);
 				
 				return 1;
 			}
 			if(lista.buscaElemento("milho") == -1 && num == 2){
 				lista.inserePrimeiro("milho", 0);
 				System.out.println("O jogador "+getJogador()+" perdeu milho");
-				setQt(getQt()+1);
+				setQuantidade(getQuantidade()+1);
 				
 				return 1;
 			}
 			if(lista.buscaElemento("presunto") == -1 && num == 3){
 				lista.inserePrimeiro("presunto", 0);			
 				System.out.println("O jogador "+getJogador()+" perdeu presunto");
-				setQt(getQt()+1);
+				setQuantidade(getQuantidade()+1);
 				
 				return 1;
 			}
 			if(lista.buscaElemento("ervilha") == -1 && num == 4){
 				lista.inserePrimeiro("ervilha", 0);
 				System.out.println("O jogador "+getJogador()+" perdeu ervilha");
-				setQt(getQt()+1);
+				setQuantidade(getQuantidade()+1);
 				
 				return 1;
 			}
