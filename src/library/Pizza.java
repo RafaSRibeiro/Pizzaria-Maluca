@@ -2,7 +2,7 @@ package library;
 
 import listas.ListaDupla;
 
-public abstract class Pizza {
+public abstract class Pizza implements IPizza {
 
     protected boolean rodadaSemJogar;
 
@@ -43,4 +43,20 @@ public abstract class Pizza {
     public void setIngredientes(ListaDupla ingredientes) {
         this.ingredientes = ingredientes;
     }
+
+    public static final String cebola = "CEBOLA";
+    public static final String calabresa = "CALABRESA";
+    public static final String queijo = "QUEIJO";
+    public static final String tomate = "TOMATE";
+    public static final String ovos = "OVOS";
+    public static final String azeitona = "AZEITONA";
+    public static final String milho = "MILHO";
+    public static final String presunto = "PRESUNTO";
+    public static final String brocolis = "BROCOLIS";
+    public static final String ervilha = "ERVILHA";
+
+    public boolean precisaIngrediente(String ingrediente) {
+        return ingredientes.buscaElemento(ingrediente) != -1;
+    }
+
 }

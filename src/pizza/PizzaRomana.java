@@ -13,11 +13,11 @@ public class PizzaRomana extends Pizza {
 
 	public ArrayList<String> faltamEssesIngredientes(){
 		ArrayList<String> ingredientes = new ArrayList<>();
-		ingredientes.add("Ervilha");
-		ingredientes.add("Presunto");
-		ingredientes.add("Milho");
-		ingredientes.add("Cebola");
-		ingredientes.add("Queijo");
+		ingredientes.add(ervilha);
+		ingredientes.add(presunto);
+		ingredientes.add(milho);
+		ingredientes.add(cebola);
+		ingredientes.add(queijo);
 
 		faltam.clear();
 		
@@ -34,29 +34,27 @@ public class PizzaRomana extends Pizza {
 
 		return faltam;
 	}
-	
+
+	private void inicializaIngredientes() {
+		getIngredientes().inserePrimeiro(queijo, 0);
+		getIngredientes().inserePrimeiro(cebola, 0);
+		getIngredientes().inserePrimeiro(milho, 0);
+		getIngredientes().inserePrimeiro(presunto, 0);
+		getIngredientes().inserePrimeiro(ervilha, 0);
+	}
+
 	public PizzaRomana(int jogador){
-		getIngredientes().inserePrimeiro("queijo", 0);
-		getIngredientes().inserePrimeiro("cebola", 0);
-		getIngredientes().inserePrimeiro("milho", 0);
-		getIngredientes().inserePrimeiro("presunto", 0);
-		getIngredientes().inserePrimeiro("ervilha", 0);
+		inicializaIngredientes();
 		setJogador(jogador);
 		setQuantidade(5);
 		setRodadaSemJogar(false);
-
 	}
-	
-	
+
 	public void limpaPizza(){
 		for(int i = 0; i < getQuantidade(); i++)
 			getIngredientes().removePrimeiro();
 		
-		getIngredientes().inserePrimeiro("queijo", 0);
-		getIngredientes().inserePrimeiro("cebola", 0);
-		getIngredientes().inserePrimeiro("milho", 0);
-		getIngredientes().inserePrimeiro("presunto", 0);
-		getIngredientes().inserePrimeiro("ervilha", 0);
+		inicializaIngredientes();
 		setQuantidade(5);
 	}
 	
@@ -64,7 +62,6 @@ public class PizzaRomana extends Pizza {
 			if(getIngredientes().buscaElemento(elemento) > -1){
 				getIngredientes().removeElemento(elemento);
 				setQuantidade(getQuantidade()-1);
-				System.out.println("O Jogador "+ getJogador() + " pegou "+elemento + "!");
 			}
 			verificaSeGanhou();
 	}

@@ -13,11 +13,11 @@ public class PizzaVegetariana extends Pizza {
 
 	public ArrayList<String> faltamEssesIngredientes(){
 		ArrayList<String> ingredientes = new ArrayList<>();
-		ingredientes.add("Ovos");
-		ingredientes.add("Cebola");
-		ingredientes.add("Ervilha");
-		ingredientes.add("Tomate");
-		ingredientes.add("Brocolis");
+		ingredientes.add(ovos);
+		ingredientes.add(cebola);
+		ingredientes.add(ervilha);
+		ingredientes.add(tomate);
+		ingredientes.add(brocolis);
 
 		faltam.clear();
 		
@@ -34,13 +34,17 @@ public class PizzaVegetariana extends Pizza {
 
 		return faltam;
 	}
-	
+
+	private void inicializaIngredientes() {
+		getIngredientes().inserePrimeiro(brocolis, 0);
+		getIngredientes().inserePrimeiro(tomate, 0);
+		getIngredientes().inserePrimeiro(ervilha, 0);
+		getIngredientes().inserePrimeiro(cebola, 0);
+		getIngredientes().inserePrimeiro(ovos, 0);
+	}
+
 	public PizzaVegetariana(int jogador){
-		getIngredientes().inserePrimeiro("brocolis", 0);
-		getIngredientes().inserePrimeiro("tomate", 0);
-		getIngredientes().inserePrimeiro("ervilha", 0);
-		getIngredientes().inserePrimeiro("cebola", 0);
-		getIngredientes().inserePrimeiro("ovos", 0);
+		inicializaIngredientes();
 		setJogador(jogador);
 		setQuantidade(5);
 		setRodadaSemJogar(false);
@@ -51,11 +55,7 @@ public class PizzaVegetariana extends Pizza {
 		for(int i = 0; i < getQuantidade(); i++)
 			getIngredientes().removePrimeiro();
 		
-		getIngredientes().inserePrimeiro("brocolis", 0);
-		getIngredientes().inserePrimeiro("tomate", 0);
-		getIngredientes().inserePrimeiro("ervilha", 0);
-		getIngredientes().inserePrimeiro("cebola", 0);
-		getIngredientes().inserePrimeiro("ovos", 0);
+		inicializaIngredientes();
 		setQuantidade(5);
 	}
 	
@@ -63,7 +63,6 @@ public class PizzaVegetariana extends Pizza {
 		if(getIngredientes().buscaElemento(elemento) > -1){
 			getIngredientes().removeElemento(elemento);
 			setQuantidade(getQuantidade()-1);
-			System.out.println("O Jogador "+ getJogador() + " pegou "+elemento + "!");
 		}
 		verificaSeGanhou();
 }

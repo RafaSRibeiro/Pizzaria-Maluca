@@ -13,11 +13,11 @@ public class PizzaCalabresa extends Pizza {
 
     public ArrayList<String> faltamEssesIngredientes() {
         ArrayList<String> ingredientes = new ArrayList<>();
-        ingredientes.add("Ervilha");
-        ingredientes.add("Ovos");
-        ingredientes.add("Brocolis");
-        ingredientes.add("Azeitona");
-        ingredientes.add("Calabresa");
+        ingredientes.add(ervilha);
+        ingredientes.add(ovos);
+        ingredientes.add(brocolis);
+        ingredientes.add(azeitona);
+        ingredientes.add(calabresa);
 
         faltam.clear();
 
@@ -37,27 +37,26 @@ public class PizzaCalabresa extends Pizza {
 
 
     public PizzaCalabresa(int jogador) {
-        getIngredientes().inserePrimeiro("calabresa", 0);
-        getIngredientes().inserePrimeiro("azeitona", 0);
-        getIngredientes().inserePrimeiro("brocolis", 0);
-        getIngredientes().inserePrimeiro("ovos", 0);
-        getIngredientes().inserePrimeiro("ervilha", 0);
+        inicializaIngredientes();
         setJogador(jogador);
         setQuantidade(5);
         setRodadaSemJogar(false);
     }
 
+    private void inicializaIngredientes() {
+        getIngredientes().inserePrimeiro(calabresa, 0);
+        getIngredientes().inserePrimeiro(azeitona, 0);
+        getIngredientes().inserePrimeiro(brocolis, 0);
+        getIngredientes().inserePrimeiro(ovos, 0);
+        getIngredientes().inserePrimeiro(ervilha, 0);
+    }
 
     public void limpaPizza() {
         while (getIngredientes().tamanho() != 0) {
             getIngredientes().removePrimeiro();
         }
 
-        getIngredientes().inserePrimeiro("calabresa", 0);
-        getIngredientes().inserePrimeiro("azeitona", 0);
-        getIngredientes().inserePrimeiro("brocolis", 0);
-        getIngredientes().inserePrimeiro("ovos", 0);
-        getIngredientes().inserePrimeiro("ervilha", 0);
+        inicializaIngredientes();
 
         setQuantidade(5);
     }
@@ -66,7 +65,6 @@ public class PizzaCalabresa extends Pizza {
         if (getIngredientes().buscaElemento(elemento) > -1) {
             getIngredientes().removeElemento(elemento);
             setQuantidade(getQuantidade() - 1);
-            System.out.println("O Jogador " + getJogador() + " pegou " + elemento + "!");
         }
         verificaSeGanhou();
     }
