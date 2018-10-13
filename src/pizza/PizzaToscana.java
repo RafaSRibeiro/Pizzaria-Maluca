@@ -1,7 +1,6 @@
 package pizza;
 
 import library.Pizza;
-import listas.ListaDupla;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -9,8 +8,6 @@ import java.util.Random;
 import javax.swing.JOptionPane;
 
 public class PizzaToscana extends Pizza {
-
-    ListaDupla lista = new ListaDupla();
 
     ArrayList<String> faltam = new ArrayList<>();
 
@@ -26,8 +23,8 @@ public class PizzaToscana extends Pizza {
 
         for (int j = 0; j < ingredientes.size(); j++) {
             String ing = ingredientes.get(j);
-            for (int i = 1; i < this.lista.tamanho() + 1; i++) {
-                if (ing.equalsIgnoreCase(this.lista.elementoNaPosicao(i).getNomeEtapa())) {
+            for (int i = 1; i < this.getIngredientes().tamanho() + 1; i++) {
+                if (ing.equalsIgnoreCase(this.getIngredientes().elementoNaPosicao(i).getNomeEtapa())) {
                     this.faltam.add(ingredientes.get(j));
                     ingredientes.remove(j);
                     j--;
@@ -39,11 +36,11 @@ public class PizzaToscana extends Pizza {
     }
 
     public PizzaToscana(int jogador) {
-        lista.inserePrimeiro("tomate", 0);
-        lista.inserePrimeiro("presunto", 0);
-        lista.inserePrimeiro("azeitona", 0);
-        lista.inserePrimeiro("calabresa", 0);
-        lista.inserePrimeiro("cebola", 0);
+        getIngredientes().inserePrimeiro("tomate", 0);
+        getIngredientes().inserePrimeiro("presunto", 0);
+        getIngredientes().inserePrimeiro("azeitona", 0);
+        getIngredientes().inserePrimeiro("calabresa", 0);
+        getIngredientes().inserePrimeiro("cebola", 0);
         setJogador(jogador);
         setQuantidade(5);
         setRodadaSemJogar(false);
@@ -52,19 +49,19 @@ public class PizzaToscana extends Pizza {
 
     public void limpaPizza() {
         for (int i = 0; i < getQuantidade(); i++)
-            lista.removePrimeiro();
+            getIngredientes().removePrimeiro();
 
-        lista.inserePrimeiro("tomate", 0);
-        lista.inserePrimeiro("presunto", 0);
-        lista.inserePrimeiro("azeitona", 0);
-        lista.inserePrimeiro("calabresa", 0);
-        lista.inserePrimeiro("cebola", 0);
+        getIngredientes().inserePrimeiro("tomate", 0);
+        getIngredientes().inserePrimeiro("presunto", 0);
+        getIngredientes().inserePrimeiro("azeitona", 0);
+        getIngredientes().inserePrimeiro("calabresa", 0);
+        getIngredientes().inserePrimeiro("cebola", 0);
         setQuantidade(5);
     }
 
     public void perdeIngredienteX(String elemento) {
-        if (lista.buscaElemento(elemento) > -1) {
-            lista.removeElemento(elemento);
+        if (getIngredientes().buscaElemento(elemento) > -1) {
+            getIngredientes().removeElemento(elemento);
             setQuantidade(getQuantidade() - 1);
             System.out.println("O Jogador " + getJogador() + " pegou " + elemento + "!");
         }
@@ -80,36 +77,36 @@ public class PizzaToscana extends Pizza {
                 return 1;
             }
             num = n.nextInt(5);
-            if (lista.buscaElemento("tomate") == -1 && num == 0) {
-                lista.inserePrimeiro("tomate", 0);
+            if (getIngredientes().buscaElemento("tomate") == -1 && num == 0) {
+                getIngredientes().inserePrimeiro("tomate", 0);
                 System.out.println("O jogador " + getJogador() + " perdeu tomate");
                 setQuantidade(getQuantidade() + 1);
 
                 return 1;
             }
-            if (lista.buscaElemento("presunto") == -1 && num == 1) {
-                lista.inserePrimeiro("presunto", 0);
+            if (getIngredientes().buscaElemento("presunto") == -1 && num == 1) {
+                getIngredientes().inserePrimeiro("presunto", 0);
                 System.out.println("O jogador " + getJogador() + " perdeu presunto");
                 setQuantidade(getQuantidade() + 1);
 
                 return 1;
             }
-            if (lista.buscaElemento("azeitona") == -1 && num == 2) {
-                lista.inserePrimeiro("azeitona", 0);
+            if (getIngredientes().buscaElemento("azeitona") == -1 && num == 2) {
+                getIngredientes().inserePrimeiro("azeitona", 0);
                 System.out.println("O jogador " + getJogador() + " perdeu azeitona");
                 setQuantidade(getQuantidade() + 1);
 
                 return 1;
             }
-            if (lista.buscaElemento("calabresa") == -1 && num == 3) {
-                lista.inserePrimeiro("calabresa", 0);
+            if (getIngredientes().buscaElemento("calabresa") == -1 && num == 3) {
+                getIngredientes().inserePrimeiro("calabresa", 0);
                 System.out.println("O jogador " + getJogador() + " perdeu calabresa");
                 setQuantidade(getQuantidade() + 1);
 
                 return 1;
             }
-            if (lista.buscaElemento("cebola") == -1 && num == 4) {
-                lista.inserePrimeiro("cebola", 0);
+            if (getIngredientes().buscaElemento("cebola") == -1 && num == 4) {
+                getIngredientes().inserePrimeiro("cebola", 0);
                 System.out.println("O jogador " + getJogador() + " perdeu cebola");
                 setQuantidade(getQuantidade() + 1);
 
@@ -119,7 +116,7 @@ public class PizzaToscana extends Pizza {
     }
 
     public void verificaSeGanhou() {
-        if (lista.isVazio()) {
+        if (getIngredientes().isVazio()) {
             System.out.println("O Jogador " + getJogador() + " ganhou!");
             JOptionPane.showMessageDialog(null, "O Jogador " + getJogador() + " ganhou!");
             System.exit(0);

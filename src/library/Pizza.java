@@ -1,5 +1,7 @@
 package library;
 
+import listas.ListaDupla;
+
 public abstract class Pizza {
 
     protected boolean rodadaSemJogar;
@@ -7,6 +9,8 @@ public abstract class Pizza {
     protected int jogador;
 
     protected int quantidade;
+
+    protected ListaDupla ingredientes = new ListaDupla();
 
     public boolean isRodadaSemJogar() {
         return rodadaSemJogar;
@@ -32,4 +36,11 @@ public abstract class Pizza {
         this.quantidade = quantidade;
     }
 
+    public ListaDupla getIngredientes() {
+        return ingredientes;
+    }
+
+    public void setIngredientes(ListaDupla ingredientes) {
+        this.ingredientes = ingredientes;
+    }
 }
