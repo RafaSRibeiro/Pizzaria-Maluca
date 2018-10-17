@@ -1,12 +1,12 @@
 package principal;
 
-public class SorteOuAzar {
+public class CartaSorteOuAzar {
 
-	String texto;
+	private String texto;
 
-	int numero;	
+	private int numero;
 	
-	public SorteOuAzar(String texto, int numero) {
+	public CartaSorteOuAzar(String texto, int numero) {
 		this.texto = texto;
 		this.numero = numero;
 	}

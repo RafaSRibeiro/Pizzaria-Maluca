@@ -2,7 +2,7 @@ package principal;
 
 public class Pilha {
 
-    private NoPilha topo = null;
+    private ElementoPilha topo = null;
 
     public Pilha() {
     }
@@ -11,26 +11,26 @@ public class Pilha {
         return topo == null;
     }
 
-    public SorteOuAzar retTopo() {
-        return topo.carta;
+    public CartaSorteOuAzar retTopo() {
+        return topo.getCarta();
     }
 
-    public void empilha(SorteOuAzar c) {
-        NoPilha novo = new NoPilha(c);
+    public void empilha(CartaSorteOuAzar c) {
+        ElementoPilha novo = new ElementoPilha(c);
         if (topo == null)
             topo = novo;
         else {
-            novo.proximo = topo;
+            novo.setProximo(topo);
             topo = novo;
         }
     }
 
-    public NoPilha desempilha() {
+    public ElementoPilha desempilha() {
         if (estaVazia()) {
             return null;
         } else {
-            NoPilha retornaCarta = topo;
-            this.topo = topo.proximo;
+            ElementoPilha retornaCarta = topo;
+            this.topo = topo.getProximo();
             return retornaCarta;
         }
     }

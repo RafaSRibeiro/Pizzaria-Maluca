@@ -1,13 +1,13 @@
 package principal;
 
-public class NoCartas {
+public class ElementoPilha {
 
     private CartaSorteOuAzar carta;
 
-    private NoCartas proximo;
+    private ElementoPilha proximo;
 
-    public NoCartas(CartaSorteOuAzar carta) {
-        setCarta(carta);
+    public ElementoPilha(CartaSorteOuAzar c) {
+        carta = c;
         proximo = null;
     }
 
@@ -19,18 +19,11 @@ public class NoCartas {
         this.carta = carta;
     }
 
-    public NoCartas getProximo() {
+    public ElementoPilha getProximo() {
         return proximo;
     }
 
-    public void setProximo(NoCartas proximo) {
+    public void setProximo(ElementoPilha proximo) {
         this.proximo = proximo;
     }
-
-    @Override
-    public String toString() {
-        return "NoCartas [carta=" + carta.getTexto();
-    }
-
-
 }

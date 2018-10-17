@@ -1,7 +1,7 @@
 package listas;
 
 import principal.NoCartas;
-import principal.SorteOuAzar;
+import principal.CartaSorteOuAzar;
 
 public class ListaSimplesCartas {
 
@@ -20,31 +20,31 @@ public class ListaSimplesCartas {
         atual = primeiro;
         while (atual != null) {
             comp++;
-            atual = atual.proximo;
+            atual = atual.getProximo();
         }
         return comp;
     }
 
-    public void inserePrimeiro(SorteOuAzar s) {
+    public void inserePrimeiro(CartaSorteOuAzar s) {
         NoCartas novo = new NoCartas(s);
         if (estaVazio()) {
             primeiro = novo;
             ultimo = novo;
             atual = novo;
         } else {
-            novo.proximo = primeiro;
+            novo.setProximo(primeiro);
             primeiro = novo;
         }
     }
 
-    public void insereUltimo(SorteOuAzar s) {
+    public void insereUltimo(CartaSorteOuAzar s) {
         NoCartas novo = new NoCartas(s);
         if (estaVazio()) {
             primeiro = novo;
             ultimo = novo;
             atual = novo;
         } else {
-            ultimo.proximo = novo;
+            ultimo.setProximo(novo);
             ultimo = novo;
         }
     }
@@ -52,22 +52,21 @@ public class ListaSimplesCartas {
     public void moveParaPosicao(int pos) {
         atual = primeiro;
         for (int i = 1; i <= pos; i++) {
-            atual = atual.proximo;
+            atual = atual.getProximo();
         }
     }
 
-    public SorteOuAzar retornaDaPosicao(int pos) {
+    public CartaSorteOuAzar retornaDaPosicao(int pos) {
         moveParaPosicao(pos);
-        return atual.carta;
+        return atual.getCarta();
     }
 
-    // Retorna a posi��o de um elemento na lista. Se n�o existir retorna um n�mero negativo
     public int buscaElemento(int n) {
         int cont = 0;
         atual = primeiro;
 
-        while (atual != null && (atual.carta.getNumero() != n)) {
-            atual = atual.proximo;
+        while (atual != null && (atual.getCarta().getNumero() != n)) {
+            atual = atual.getProximo();
             cont++;
         }
         if (atual != null) {
@@ -77,32 +76,29 @@ public class ListaSimplesCartas {
         return -1;
     }
 
-    // Remove o primeiro elemento da lista
     public void removePrimeiro() {
-        primeiro = primeiro.proximo;
+        primeiro = primeiro.getProximo();
     }
 
-    // Remove o último elemento da lista
     public void removeUltimo() {
         int pos;
         pos = comprimento() - 1;
         moveParaPosicao(pos);
-        atual.proximo = null;
+        atual.setProximo(null);
     }
 
 
-    // remove o elemento da posição indicada
-    public SorteOuAzar removeNaPosicao(int pos) {
+    public CartaSorteOuAzar removeNaPosicao(int pos) {
         if (pos == 0) {
             removePrimeiro();
             return null;
         }
         NoCartas temp;
         moveParaPosicao(pos);
-        temp = atual.proximo;
+        temp = atual.getProximo();
         pos = pos - 1;
         moveParaPosicao(pos);
-        atual.proximo = temp;
+        atual.setProximo(temp);
         return null;
     }
 
@@ -111,6 +107,5 @@ public class ListaSimplesCartas {
         String a = atual.toString();
         return a;
     }
-
 
 }
