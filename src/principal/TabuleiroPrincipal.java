@@ -1,4 +1,4 @@
-package estrutura_de_dados;
+package principal;
 
 import library.Pizza;
 import listas.ListaDupla;

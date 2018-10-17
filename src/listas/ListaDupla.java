@@ -1,6 +1,6 @@
 package listas;
 
-import estrutura_de_dados.NoProjetoDupla;
+import principal.NoProjetoDupla;
 
 public class ListaDupla {
     private NoProjetoDupla primeiro, ultimo, atual;
